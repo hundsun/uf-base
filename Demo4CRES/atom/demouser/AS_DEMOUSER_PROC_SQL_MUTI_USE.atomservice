@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_PROC_SQL_MUTI_USE" chineseName="AS_演示用户管理_PROC数组使用" objectId="2100007" database="USERDB" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [PROC语句数组]&#xA;**   功能：PROC语句数组使用&#xA;**   范围：业务过程中的表记录一次性批量获取&#xA;**   注意：批量获取记录不能太多，否则容易导致操作系统堆栈不足&#xA;**&#xA;********************************************************************/&#xA;@id_no_t[10];&#xA;// Proc方式记录批量获取&#xA;[PRO*C语句][select id_no,&#xA;id_kind,&#xA;user_gender,&#xA;address,&#xA;phone_code&#xA;into @id_no_t,&#xA;@id_kind_t,&#xA;@user_gender_t,&#xA;@address_t,&#xA;@phone_code_t&#xA;from demoinfo&#xA;where rownum &lt;= 100]&#xA;{&#xA;// Select无记录报错捕获&#xA;[PRO*C结果集为空]&#xA;{&#xA;[函数报错返回][ERR_USER_DEMOINFO_NOTEXISTS][演示信息记录不存在][@user_id]&#xA;}&#xA;}&#xA;else&#xA;{&#xA;[PRO*C函数报错返回][ERR_USER_QRY_DEMOINFO_FAIL][查询演示信息失败][@user_id]&#xA;}&#xA;&#xA;">
+  <inputParameters id="user_id" flags=""/>
+  <outputParameters id="id_no" flags=""/>
+  <outputParameters id="id_kind" flags=""/>
+  <outputParameters id="user_gender" flags=""/>
+  <outputParameters id="address" flags=""/>
+  <outputParameters id="phone_code" flags=""/>
+  <internalVariables id="id_no_t" name="证件号码" paramType="NON_STD_FIELD" type="HsIDNo[100]" flags=""/>
+  <internalVariables id="id_kind_t" name="证件类别" paramType="NON_STD_FIELD" type="HsType[100]" flags=""/>
+  <internalVariables id="user_gender_t" name="用户性别" paramType="NON_STD_FIELD" type="HsType[100]" flags=""/>
+  <internalVariables id="address_t" name="联系地址" paramType="NON_STD_FIELD" type="HsAddress[100]" flags=""/>
+  <internalVariables id="phone_code_t" name="联系电话" paramType="NON_STD_FIELD" type="HsPhone[100]" flags=""/>
+</atom:AtomService>

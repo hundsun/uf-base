@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<useroption>
+<!-- 业务类别选项配置  -->
+    <group id="bussinesstype" text ="业务类别" default_value="0,1,2,3,4,5,6,7,8,9,,a,b,c,d,e,f,g,h,i,j,k,l,m,u,z">
+       <item id="User" text="用户" type="CHECK" value="0"/>
+       <item id="Auth" text="认证" type="CHECK" value="1"/>
+       <item id="Acct" text="账户" type="CHECK" value="2"/>
+       <item id="Arch" text="档案" type="CHECK" value="3"/>
+       <item id="Acpt" text="受理" type="CHECK" value="4"/>
+       <item id="Asset" text="存管" type="CHECK" value="5"/>
+       <item id="Secu" text="证券" type="CHECK" value="6"/>
+       <item id="Ofund" text="基金" type="CHECK" value="7"/>
+       <item id="Bond" text="债券" type="CHECK" value="8"/>
+       <item id="Crdt" text="融资融券" type="CHECK" value="9"/>
+       <item id="Futu" text="期货" type="CHECK" value="a"/>
+       <item id="Ref" text="转融通" type="CHECK" value="b"/>
+       <item id="Otc" text="OTC" type="CHECK" value="c"/>
+       <item id="Prod" text="产品" type="CHECK" value="d"/>
+       <item id="Pay" text="消费支付" type="CHECK" value="e"/>
+       <item id="Ufx" text="统一接入" type="CHECK" value="f"/>
+       <item id="Mch" text="交易撮合" type="CHECK" value="g"/>
+       <item id="Sdc" text="登记托管" type="CHECK" value="h"/>
+       <item id="Equ" text="股权交易" type="CHECK" value="i"/>
+       <item id="Aas" text="资产账务" type="CHECK" value="j"/>
+       <item id="Bank" text="三方存管" type="CHECK" value="k"/>
+       <item id="Bkcc" text="银企直连" type="CHECK" value="l"/>
+       <item id="Deli" text="清算交收" type="CHECK" value="m"/>
+       <item id="Uft" text="极速交易" type="CHECK" value="u"/>
+       <item id="Fund" text="交易资金" type="CHECK" value="z"/>
+    </group>
+
+	<group id="genFileType" text ="" default_value="genMenu,genMenuAnaFunction,genFunction">
+		<item id="genMenu" text="生成菜单相关文件" type="CHECK"  value="genMenu"/>
+		<item id="genMenuAnaFunction" text="生成菜单和功能对应相关文件"  type="CHECK"  value="genMenuAnaFunction"/>
+		<item id="genFunction" text="生成功能相关文件" type="CHECK"  value="genFunction"/>
+	</group>
+  <group id="codeVersion"     text ="生成版本" default_value="0">
+  <item id="" text="ORACLE版" type="RADIO"  value ="0"/>
+  <item id=""     text="C头文件"      type="RADIO"  value="2"/>
+  </group>
+  <group id="version" text ="版本" default_value="2">
+  <item id="" text="2.0平台" type="RADIO" value="2"/>
+  <item id="" text="账户2.0" type="RADIO"  value="1"/>
+  <item id="" text="认证1.0" type="RADIO"  value="0"/>
+  </group>
+ <group id="others" text ="其它" default_value="marketTypeValue,containSpecialMenu">
+ <item id="marketTypeValue" text="安装包格式" type="CHECK"  value="marketTypeValue"/>
+ <item id="containSpecialMenu" text="包含增值菜单" type="CHECK"  value="containSpecialMenu"/>
+ </group>
+</useroption>

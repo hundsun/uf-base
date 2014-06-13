@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logic:LogicService xmlns:logic="http://www.hundsun.com/ares/studio/cres/logic/1.0.0" interfaceFlag="" name="LS_DEMOUSER_RESULT_SEND" chineseName="LS_演示用户管理_结果集传输" description="业务调用出现异常不退出" objectId="100006" pseudoCode="/********************************************************************&#xA;**&#xA;** [结果集传输]&#xA;**   功能：对结果集数据进行传输处理&#xA;**   范围：业务流程&#xA;**   注意：&#xA;**&#xA;********************************************************************/&#xA;&#xA;[AS_演示用户管理_结果集传输]&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="audit_action" flags="D"/>
+  <inputParameters id="busi_data" paramType="OBJECT" type="demouser.User"/>
+  <inputParameters id="busi_data1" paramType="OBJECT" type="demouser.User" multiplicity="[1..n]"/>
+</logic:LogicService>

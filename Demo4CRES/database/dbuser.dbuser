@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle:OracleUserResourceData xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="dbuser">
+  <users name="hs_user" decription="参数管理、用户权限、用户管理" attributes="user" password="123456"/>
+  <users name="hs_asset" decription="账户、资产、持仓" attributes="asset" password="123456"/>
+  <users name="hs_fund" decription="交易资金" attributes="fund" password="123456"/>
+  <users name="hs_secu" decription="证券交易" attributes="secu" password="123456"/>
+  <users name="hs_ofund" decription="开放式基金交易" attributes="ofund" password="123456"/>
+  <users name="hs_bond" decription="债券式基金交易" attributes="bond" password="123456"/>
+  <users name="hs_futu" decription="期货交易" attributes="futu" password="123456"/>
+  <users name="hs_settinit" decription="清算结算其他用户数据" attributes="settinit" password="123456"/>
+  <users name="hs_sett" decription="清算结算" attributes="sett" password="123456"/>
+  <users name="hs_data" decription="查询统计报表其他用户数据" attributes="data" password="123456"/>
+  <users name="hs_his" decription="查询统计报表" attributes="his" password="123456"/>
+  <users name="hs_fil" decription="数据归档用户" attributes="fil" password="123456"/>
+  <users name="hs_auth" decription="统一认证" attributes="auth" password="123456"/>
+  <users name="hs_crdt" decription="融资融券" attributes="crdt" password="123456"/>
+  <users name="hs_ufx" decription="统一接入" attributes="ufx" password="123456"/>
+  <users name="hs_arch" decription="档案系统" attributes="arch" password="123456"/>
+  <users name="hs_prod" decription="金融产品销售系统" attributes="prod" password="123456"/>
+  <users name="hs_ref" decription="转融通" attributes="ref" password="123456"/>
+  <users name="hs_acpt" decription="受理管理" attributes="acpt" password="123456"/>
+  <users name="hs_sdc" decription="登记存管及一级清算" attributes="sdc" password="123456"/>
+  <users name="hs_otc" decription="股权交易" attributes="otc" password="123456"/>
+  <users name="hs_mch" decription="交易撮合" attributes="mch" password="123456"/>
+  <privileges name="CONNECT" type="角色权限" decription="数据库连接"/>
+  <privileges name="RESOURCE" type="角色权限" decription="数据库资源"/>
+  <privileges name="DBA" type="角色权限" decription="管理员权限"/>
+  <privileges name="UNLIMITED TABLESPACE" type="系统权限" decription="无限制表空间"/>
+  <privileges name="create any table" type="系统权限" decription="创建表结构权限"/>
+  <privileges name="select any table" type="系统权限" decription="查询表结构权限"/>
+  <privileges name="drop any table" type="系统权限" decription="删除表结构权限"/>
+  <privileges name="create any index" type="系统权限" decription="创建表索引"/>
+  <privileges name="delete any table" type="系统权限" decription="删除表数据"/>
+  <privileges name="insert any table" type="系统权限" decription="增加表数据"/>
+  <privileges name="update any table" type="系统权限" decription="修改表数据"/>
+  <privileges name="create any directory" type="系统权限" decription="创建数据库目录"/>
+</oracle:OracleUserResourceData>

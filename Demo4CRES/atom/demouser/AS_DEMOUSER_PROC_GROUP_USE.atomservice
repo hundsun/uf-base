@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_PROC_GROUP_USE" chineseName="AS_演示用户管理_过程数组调用" objectId="2100021" database="USERDB" pseudoCode="/********************************************************************&#xA;**&#xA;** [过程数组使用]&#xA;**   功能：通过数组传入过程的输入输出&#xA;**   范围：原子服务和原子函数&#xA;**   注意：需要定义数组变量&#xA;**&#xA;********************************************************************/&#xA;&#xA;&#xA;[AP_演示用户管理_数组使用][stock_code_group=@stock_code_t,stock_account_group=@stock_account_t]&#xA;&#xA;">
+  <inputParameters id="user_id" flags=""/>
+  <internalVariables id="stock_code_t" name="证券代码" paramType="NON_STD_FIELD" type="HsStockCode[500]" flags=""/>
+  <internalVariables id="stock_account_t" name="证券账号" paramType="NON_STD_FIELD" type="HsStockAccount[500]" flags=""/>
+</atom:AtomService>

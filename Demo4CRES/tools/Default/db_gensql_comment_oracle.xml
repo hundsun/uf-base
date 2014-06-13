@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<useroption>
+	<!-- 子系统选项配置  -->
+	<group id="dbmodule" text ="模块">
+		<module id="" text="数据库" module_root="database" type="CHECK" default_value=""></module>
+	</group>
+		<!-- 数据库对象是否包含用户名选项配置 -->
+	<group id="user" text ="用户前缀" default_value="1">
+       <item id="" text="带用户前缀" type="RADIO" value="1"/>
+       <item id="" text="不带用户前缀" type="RADIO" value="0"/>
+    </group>
+</useroption>

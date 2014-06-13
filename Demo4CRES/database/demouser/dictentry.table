@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="dictentry" chineseName="字典条目" objectId="100001">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_USER_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="100001" splitField="manage_level" splitNum="12" startData="201001" userSplit="true" isRedu="true" isClear="true"/>
+  </data2>
+  <columns fieldName="dict_entry"/>
+  <columns fieldName="manage_level"/>
+  <columns fieldName="entry_name"/>
+  <columns fieldName="access_level"/>
+  <columns fieldName="dict_type"/>
+  <columns fieldName="dict_kind"/>
+  <indexes name="idx_dictentry" unique="true">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="dict_entry"/>
+  </indexes>
+  <indexes name="idx_dictentry" unique="true" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="dict_entry"/>
+  </indexes>
+</database:TableResourceData>

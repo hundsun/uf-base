@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logic:LogicService xmlns:logic="http://www.hundsun.com/ares/studio/cres/logic/1.0.0" interfaceFlag="A" name="LS_DEMOUSER_DEMOINFO_ADD" chineseName="LS_演示用户管理_演示信息增加" description="演示信息增加" objectId="100001" pseudoCode="&#xA;[复核业务标志]&#xA;&#xA;[AS_演示用户管理_演示信息设置][action_in=1]&#xA;&#xA;[AS_演示用户管理_用户操作日志记录][log_serial_no = @serial_no, operator_action=2]&#xA;&#xA;&#xA;[LF_演示用户管理_结果集X标志返回]">
+  <inputParameters id="user" paramType="OBJECT" type="demouser.User"/>
+  <outputParameters id="serial_no" flags=""/>
+</logic:LogicService>

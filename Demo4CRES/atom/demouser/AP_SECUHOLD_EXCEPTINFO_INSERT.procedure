@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure:Procedure xmlns:procedure="http://www.hundsun.com/ares/studio/procedure/1.0.0" name="AP_SECUHOLD_EXCEPTINFO_INSERT" chineseName="AP_演示用户管理_业务处理异常记录" objectId="3110002" database="USERDB" interfaceFlag="" pseudoCode="&#xA;[事务处理开始]&#xA;&#xA;@serial_counter_no := &lt;CNST_ASSETSERIALTYPE_SECUEXCEPTINFO>;&#xA;[AP_演示用户管理_演示子系统流水号获取]&#xA;@position_str := lpad(@init_date, 8, '0') || lpad(@serial_no, 10, '0');&#xA;&#xA;begin&#xA;[插入表记录][secuexceptinfo][deal_status='0', deal_info='初始记录']&#xA;exception&#xA;when others then&#xA;[事务内报错返回][ERR_ASSET_ADD_SECUEXCEPTINFO_FAIL][增加证券异常处理表记录失败][@position_str]&#xA;end;&#xA;&#xA;[事务处理结束]&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="client_id" flags=""/>
+  <inputParameters id="fund_account" flags=""/>
+  <inputParameters id="stock_account" flags=""/>
+  <inputParameters id="exchange_type" flags=""/>
+  <inputParameters id="stock_code" flags=""/>
+  <inputParameters id="client_group" flags=""/>
+  <inputParameters id="room_code" flags=""/>
+  <inputParameters id="business_flag" flags=""/>
+  <inputParameters id="stock_type" flags=""/>
+  <inputParameters id="money_type" flags=""/>
+  <inputParameters id="stock_price" flags=""/>
+  <inputParameters id="occur_amount" flags=""/>
+  <inputParameters id="init_date" flags=""/>
+  <inputParameters id="join_info" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <inputParameters id="redo_flag" flags=""/>
+  <inputParameters id="cancel_serialno" flags=""/>
+  <outputParameters id="error_pathinfo" flags="IO"/>
+  <outputParameters id="error_info" flags="D"/>
+  <outputParameters id="error_no" flags="D"/>
+  <outputParameters id="error_id" flags="D"/>
+  <outputParameters id="error_sysinfo" flags="D"/>
+  <outputParameters id="op_remark" flags="D"/>
+  <outputParameters id="serial_no" flags=""/>
+</procedure:Procedure>

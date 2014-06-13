@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oracle:OracleSpaceResourceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="dbobject">
+  <spaces name="HS_USER_DATA" chineseName="用户资料数据表空间" user="hs_user" file="/opt/oracle/oradata/test/userdat.dbf" size="1G" description="用户管理的各种资料数据" logicName="USERDB"/>
+  <spaces name="HS_USER_IDX" chineseName="用户资料索引表空间" user="hs_user" file="/opt/oracle/oradata/test/useridx.dbf" size="400M" description="用户管理的各种资料索引" logicName="USERDB"/>
+  <spaces name="HS_ASSET_DATA" chineseName="账户存管数据表空间" user="hs_asset" file="/opt/oracle/oradata/test/assetdat.dbf" size="1G" description="账户存管相关表结构" logicName="ASSETDB"/>
+  <spaces name="HS_ASSET_IDX" chineseName="账户存管索引表空间" user="hs_asset" file="/opt/oracle/oradata/test/assetidx.dbf" size="500M" description="账户存管相关表索引" logicName="ASSETDB"/>
+  <spaces name="HS_FUND_DATA" chineseName="资金数据表空间" user="hs_fund" file="/opt/oracle/oradata/test/funddat.dbf" size="1G" description="资金相关表结构" logicName="FUNDDB"/>
+  <spaces name="HS_FUND_IDX" chineseName="资金索引表空间" user="hs_fund" file="/opt/oracle/oradata/test/fundidx.dbf" size="500M" description="资金相关表索引" logicName="FUNDDB"/>
+  <spaces name="HS_SECU_DATA" chineseName="证券交易数据数据表空间" user="hs_secu" file="/opt/oracle/oradata/test/secudat.dbf" size="1G" description="证券交易相关的数据" logicName="SECUDB"/>
+  <spaces name="HS_SECU_IDX" chineseName="证券交易索引表空间" user="hs_secu" file="/opt/oracle/oradata/test/secuidx.dbf" size="500M" description="证券交易相关的索引数据" logicName="SECUDB"/>
+  <spaces name="HS_OFUND_DATA" chineseName="开放式基金交易数据表空间" user="hs_ofund" file="/opt/oracle/oradata/test/ofunddat.dbf" size="200M" description="开放式基金交易相关的数据" logicName="OFUNDDB"/>
+  <spaces name="HS_OFUND_IDX" chineseName="开放式基金交易索引表空间" user="hs_ofund" file="/opt/oracle/oradata/test/ofundidx.dbf" size="100M" description="开放式基金交易相关的索引" logicName="OFUNDDB"/>
+  <spaces name="HS_BOND_DATA" chineseName="债券交易数据表空间" user="hs_bond" file="/opt/oracle/oradata/test/bonddat.dbf" size="200M" description="债券交易相关的数据" logicName="BONDDB"/>
+  <spaces name="HS_BOND_IDX" chineseName="债券交易索引表空间" user="hs_bond" file="/opt/oracle/oradata/test/bondidx.dbf" size="100M" description="债券交易相关的索引" logicName="BONDDB"/>
+  <spaces name="HS_FUTU_DATA" chineseName="期货交易表空间" user="hs_futu" file="/opt/oracle/oradata/test/futudat.dbf" size="1G" description="期货业务相关表结构" logicName="FUTUDB"/>
+  <spaces name="HS_FUTU_IDX" chineseName="期货交易表索引" user="hs_futu" file="/opt/oracle/oradata/test/futuidx.dbf" size="400M" description="期货业务相关表索引" logicName="FUTUDB"/>
+  <spaces name="HS_SETTINIT_DATA" chineseName="结算同步其他子系统数据表空间" user="hs_settinit" file="/opt/oracle/oradata/test/settinitdat.dbf" size="1G" description="结算同步其他子系统相关表结构" logicName="SETTINITDB"/>
+  <spaces name="HS_SETTINIT_IDX" chineseName="结算同步其他子系统索引表空间" user="hs_settinit" file="/opt/oracle/oradata/test/settinitidx.dbf" size="400M" description="结算同步其他子系统相关表索引" logicName="SETTINITDB"/>
+  <spaces name="HS_SETT_DATA" chineseName="结算数据表空间" user="hs_sett" file="/opt/oracle/oradata/test/settdat.dbf" size="1G" description="结算业务相关表结构" logicName="SETTDB"/>
+  <spaces name="HS_SETT_IDX" chineseName="结算索引表空间" user="hs_sett" file="/opt/oracle/oradata/test/settidx.dbf" size="400M" description="结算业务相关表索引" logicName="SETTDB"/>
+  <spaces name="HS_DATA_DATA" chineseName="数据分析数据表空间" user="hs_data" file="/opt/oracle/oradata/test/datadat.dbf" size="20G" description="数据分析业务相关表结构" logicName="DATADB"/>
+  <spaces name="HS_DATA_IDX" chineseName="数据分析索引表空间" user="hs_data" file="/opt/oracle/oradata/test/dataidx.dbf" size="40G" description="数据分析业务相关表索引" logicName="DATADB"/>
+  <spaces name="HS_HIS_DATA" chineseName="数据分析数据表空间" user="hs_his" file="/opt/oracle/oradata/test/hisdat.dbf" size="20G" description="数据分析业务相关表结构" logicName="HISDB"/>
+  <spaces name="HS_HIS_IDX" chineseName="数据分析索引表空间" user="hs_his" file="/opt/oracle/oradata/test/hisidx.dbf" size="40G" description="数据分析业务相关表索引" logicName="HISDB"/>
+  <spaces name="HS_FIL_DATA" chineseName="归档数据表空间" user="hs_fil" file="/opt/oracle/oradata/test/fildat.dbf" size="40G" description="归档业务相关表结构" logicName="FILDB"/>
+  <spaces name="HS_FIL_IDX" chineseName="归档索引表空间" user="hs_fil" file="/opt/oracle/oradata/test/filidx.dbf" size="20G" description="归档业务相关表索引" logicName="FILDB"/>
+  <spaces name="HS_AUTH_DATA" chineseName="认证数据表空间" user="hs_auth" file="/opt/oracle/oradata/test/authdat.dbf" size="200M" description="统一认证相关表结构" logicName="AUTHDB"/>
+  <spaces name="HS_AUTH_IDX" chineseName="认证索引表空间" user="hs_auth" file="/opt/oracle/oradata/test/authidx.dbf" size="100M" description="统一认证相关表结构" logicName="AUTHDB"/>
+  <spaces name="HS_CRDT_DATA" chineseName="融资融券数据表空间" user="hs_crdt" file="/opt/oracle/oradata/test/crdtdat.dbf" size="200M" description="融资融券相关表结构" logicName="CRDTDB"/>
+  <spaces name="HS_CRDT_IDX" chineseName="融资融券索引表空间" user="hs_crdt" file="/opt/oracle/oradata/test/crdtidx.dbf" size="100M" description="融资融券相关表索引" logicName="CRDTDB"/>
+  <spaces name="HS_UFX_DATA" chineseName="统一接入表空间" user="hs_ufx" file="/opt/oracle/oradata/test/ufxdat.dbf" size="200M" description="统一接入相关表结构" logicName="UFXDB"/>
+  <spaces name="HS_UFX_IDX" chineseName="统一接入索引表空间" user="hs_ufx" file="/opt/oracle/oradata/test/ufxidx.dbf" size="100M" description="统一认证相关表索引" logicName="UFXDB"/>
+  <spaces name="HS_ARCH_DATA" chineseName="档案模块数据表空间" user="hs_arch" file="/opt/oracle/oradata/test/archdat.dbf" size="1G" description="档案模块的各种资料数据" logicName="ARCHDB"/>
+  <spaces name="HS_ARCH_IDX" chineseName="档案模块索引表空间" user="hs_arch" file="/opt/oracle/oradata/test/archidx.dbf" size="500M" description="档案模块的各种资料索引" logicName="ARCHDB"/>
+  <spaces name="HS_REF_DATA" chineseName="转融通表数据表空间" user="hs_ref" file="/opt/oracle/oradata/test/refdat.dbf" size="200M" description="转融通相关表结构" logicName="REFDB"/>
+  <spaces name="HS_REF_IDX" chineseName="转融通索引表空间" user="hs_ref" file="/opt/oracle/oradata/test/refidx.dbf" size="100M" description="转融通相关表索引" logicName="REFDB"/>
+  <spaces name="HS_ACPT_DATA" chineseName="受理资料数据表空间" user="hs_acpt" file="/opt/oracle/oradata/test/acptdat.dbf" size="200M" description="受理管理的各种资料数据" logicName="ACPTDB"/>
+  <spaces name="HS_ACPT_IDX" chineseName="受理资料索引表空间" user="hs_acpt" file="/opt/oracle/oradata/test/acptidx.dbf" size="100M" description="受理管理的各种资料索引" logicName="ACPTDB"/>
+  <spaces name="HS_OTC_DATA" chineseName="股权交易数据表空间" user="hs_otc" file="/opt/oracle/oradata/test/otcdat.dbf" size="500M" description="股权交易相关的数据" logicName="OTCDB"/>
+  <spaces name="HS_OTC_IDX" chineseName="股权交易索引表空间" user="hs_otc" file="/opt/oracle/oradata/test/otcidx.dbf" size="200M" description="股权交易相关的索引数据" logicName="OTCDB"/>
+  <spaces name="HS_SDC_DATA" chineseName="登记结算数据表空间" user="hs_sdc" file="/opt/oracle/oradata/test/sdcdat.dbf" size="500M" description="登记结算相关的数据" logicName="SDCDB"/>
+  <spaces name="HS_SDC_IDX" chineseName="登记结算索引表空间" user="hs_sdc" file="/opt/oracle/oradata/test/sdctidx.dbf" size="200M" description="登记结算相关的索引数据" logicName="SDCDB"/>
+  <spaces name="HS_PROD_DATA" chineseName="产品销售数据表空间" user="hs_prod" file="/opt/oracle/oradata/test/proddat.dbf" size="500M" description="产品销售相关表结构" logicName="PRODDB"/>
+  <spaces name="HS_PROD_IDX" chineseName="产品销售索引表空间" user="hs_prod" file="/opt/oracle/oradata/test/prodidx.dbf" size="200M" description="产品销售相关表索引" logicName="PRODDB"/>
+  <spaces name="HS_MCH_DATA" chineseName="交易撮合数据表空间" user="hs_mch" file="/opt/oracle/oradata/test/mchdat.dbf" size="1G" description="交易撮合相关的数据" logicName="MCHDB"/>
+  <spaces name="HS_MCH_IDX" chineseName="交易撮合索引表空间" user="hs_mch" file="/opt/oracle/oradata/test/mchidx.dbf" size="500M" description="交易撮合相关的索引数据" logicName="MCHDB"/>
+  <relations mainSpace="HS_USER_DATA" indexSpace="HS_USER_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_ASSET_DATA" indexSpace="HS_ASSET_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_FUND_DATA" indexSpace="HS_FUND_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_SECU_DATA" indexSpace="HS_SECU_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_OFUND_DATA" indexSpace="HS_OFUND_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_BOND_DATA" indexSpace="HS_BOND_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_FUTU_DATA" indexSpace="HS_FUTU_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_SETTINIT_DATA" indexSpace="HS_SETTINIT_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_SETT_DATA" indexSpace="HS_SETT_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_DATA_DATA" indexSpace="HS_DATA_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_HIS_DATA" indexSpace="HS_HIS_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_FIL_DATA" indexSpace="HS_FIL_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_AUTH_DATA" indexSpace="HS_AUTH_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_CRDT_DATA" indexSpace="HS_CRDT_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_UFX_DATA" indexSpace="HS_UFX_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_ARCH_DATA" indexSpace="HS_ARCH_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_REF_DATA" indexSpace="HS_REF_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_ACPT_DATA" indexSpace="HS_ACPT_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_OTC_DATA" indexSpace="HS_OTC_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_SDC_DATA" indexSpace="HS_SDC_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_PROD_DATA" indexSpace="HS_PROD_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+  <relations mainSpace="HS_MCH_DATA" indexSpace="HS_MCH_IDX">
+    <data2 key="tschouse">
+      <value xsi:type="chouse:TableSpaceRelationProperty" hisSpace="HS_HIS_DATA" hisIndexSpace="HS_HIS_IDX" fileSpace="HS_FIL_DATA" fileIndexSpace="HS_FIL_IDX"/>
+    </data2>
+    <data2 key="chouse">
+      <value xsi:type="chouse:TableSpaceProperty" reduTable="HS_DATA_DATA" chearTable="HS_SETTINIT_DATA"/>
+    </data2>
+  </relations>
+</oracle:OracleSpaceResourceData>

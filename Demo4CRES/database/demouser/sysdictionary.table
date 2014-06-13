@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="sysdictionary" chineseName="数据字典" objectId="100002">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_USER_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="100002" userSplit="true" isRedu="true" isClear="true"/>
+  </data2>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="dict_entry"/>
+  <columns fieldName="dict_type"/>
+  <columns fieldName="subentry"/>
+  <columns fieldName="access_level"/>
+  <columns fieldName="dict_prompt"/>
+  <indexes name="idx_sysdictionary" unique="true">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="dict_entry"/>
+    <columns columnName="subentry"/>
+  </indexes>
+  <indexes name="idx_sysdictionary" unique="true" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="dict_entry"/>
+    <columns columnName="subentry"/>
+  </indexes>
+</database:TableResourceData>

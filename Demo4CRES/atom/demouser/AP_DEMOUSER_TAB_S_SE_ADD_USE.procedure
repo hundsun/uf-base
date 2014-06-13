@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure:Procedure xmlns:procedure="http://www.hundsun.com/ares/studio/procedure/1.0.0" name="AP_DEMOUSER_TAB_S_SE_ADD_USE" chineseName="AP_演示用户管理_特使Select插入表记录使用" description="[插入表记录]宏定义使用" objectId="3100004" database="USERDB" interfaceFlag="" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [SELECT插入表记录]&#xA;**   功能：通过多表关联数据插入指定表中&#xA;**   范围：存储过程&#xA;**   注意：需要指明条件，如果对于字段需要变量指定，可以考虑在最后的中括号中指明&#xA;**&#xA;********************************************************************/&#xA;&#xA;[事务处理开始]&#xA;&#xA;begin&#xA;[SELECT插入表记录][hs_his.his_demoinfojour][select a.*,&#xA;nvl((select b.dict_prompt from sysdictionary b where b.dict_entry = &lt;CNST_DICT_USER_TYPE>),' ') as user_type_name&#xA;from hs_user.demoinfojour a&#xA;][demoinfojour]&#xA;exception&#xA;[事务内自定义异常返回][ERR_USER_ADD_HIS_DEMOINFOJOUR_FAIL][增加演示信息失败][@user_id]&#xA;end;&#xA;&#xA;[事务处理结束]&#xA;&#xA;&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="init_date" flags=""/>
+  <outputParameters id="error_pathinfo" flags="IO"/>
+  <outputParameters id="error_info" flags="D"/>
+  <outputParameters id="error_no" flags="D"/>
+  <outputParameters id="error_id" flags="D"/>
+  <outputParameters id="error_sysinfo" flags="D"/>
+  <outputParameters id="op_remark" flags="D"/>
+</procedure:Procedure>

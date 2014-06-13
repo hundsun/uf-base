@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure:Procedure xmlns:procedure="http://www.hundsun.com/ares/studio/procedure/1.0.0" name="AP_SECUHOLD_STOCK_UPDATE" chineseName="AP_演示用户管理_股份表字段更新" objectId="3110003" database="USERDB" interfaceFlag="" pseudoCode="&#xA;[事务处理开始]&#xA;&#xA;-- 20061222 zhengjf 增加检查,不同资金帐户下如果有相同的证券帐户,则报错,防止更新到另一个资金帐户下&#xA;begin&#xA;select fund_account, current_amount, cost_price,&#xA;sum_buy_amount, sum_buy_balance, sum_sell_amount, sum_sell_balance, cost_price&#xA;into @fund_account_t, @current_amount_old, @cost_price_old,&#xA;@sum_buy_amount_noacnt, @sum_buy_balance_noacnt, @sum_sell_amount_noacnt, @sum_sell_balance_noacnt, @cost_price_noacnt&#xA;from stock&#xA;where branch_no = @branch_no&#xA;and exchange_type = trim(@exchange_type)&#xA;and stock_account = @stock_account&#xA;and stock_code    = @stock_code&#xA;for update;&#xA;exception&#xA;when no_data_found then&#xA;@position_str := lpad(@branch_no, 5, '0') || lpad(@exchange_type, 4, '0') || lpad(@stock_account, 10, '0') || lpad(@stock_code, 6, '0');&#xA;begin&#xA;[插入表记录][stock][current_amount=0,uncome_buy_amount=0,uncome_sell_amount=0,frozen_amount=0,unfrozen_amount=0,correct_amount=0,sum_buy_amount=0,sum_buy_balance=0,sum_sell_amount=0,sum_sell_balance=0,cost_price=0,check_str=xp_chkdata(@branch_no||@exchange_type||@stock_account||@stock_code||@current_amount)]&#xA;exception&#xA;when dup_val_on_index then&#xA;null;&#xA;when others then&#xA;[事务内报错返回][ERR_ASSET_ADD_STOCK_FAIL][增加股份表失败][@position_str]&#xA;end;&#xA;when others then&#xA;[事务内报错返回][ERR_ASSET_QRY_STOCK_FAIL][查询股份表失败][@branch_no,@exchange_type,@stock_code,@stock_account]&#xA;end;&#xA;&#xA;-- 20091222 wangxl JJYWYYPT-5258 @check_str如果不传值进来将为nil，而nil与任何值做比较都是false，因此保护下 增加 trim(@check_str) is null or&#xA;-- 20090525 wangxl 检查资产账户和证券账户的一致性，0不允许不一致（默认） 1允许，如果不是1，则检查一致性，不一致则报错&#xA;--                 对于无主认领等业务，允许存在同一资金账户下有多股东账户，那么不进行此检查&#xA;if trim(@check_str) is null or substr(@check_str, 1, 1) &lt;> '1' then&#xA;if (trim(@fund_account_t) is not null) and (@fund_account_t &lt;> @fund_account) then&#xA;[事务内业务报错返回][ERR_ASSET_STOCK_FUNDACCOUNT_INVALID][无效的资产账户][@fund_account,@fund_account_t]&#xA;end if;&#xA;end if;&#xA;&#xA;-- 20090719 zhanggq 此处不考虑通过前台送check_type的做法，其实只要current_amount发生变化，就需要改变成本价，所以直接判断成本价就可以了&#xA;--                  再细分一下，也就是红冲、蓝补、转入、转出、认领等业务，导致股份直接增加，就必须考虑&#xA;-- 20090610 wangxl 考虑股份变动对成本价的影响，0不考虑（默认） 1考虑，如果是1，则进行成本价简单计算&#xA;if @current_amount &lt;> &lt;CNST_DOUBLE_ZERO> then&#xA;if ((@business_flag = &lt;CNST_BUSIFLAG_STOCKBLUESUPPLY> or @business_flag = &lt;CNST_BUSIFLAG_STOCKIN>) and abs(@current_amount_old + @occur_amount) > &lt;CNST_DOUBLE_ZERO>) then&#xA;@cost_price := (@cost_price_old * @current_amount_old + @occur_amount * @stock_price) / (@current_amount_old + @occur_amount);&#xA;elsif (@business_flag = &lt;CNST_BUSIFLAG_STOCKREDRUSH> or @business_flag = &lt;CNST_BUSIFLAG_STOCKOUT>) then&#xA;@cost_price := 0;&#xA;else&#xA;@cost_price := @stock_price;&#xA;end if;&#xA;end if;&#xA;&#xA;begin&#xA;update stock&#xA;set   current_amount     = current_amount     + @current_amount,&#xA;uncome_buy_amount  = uncome_buy_amount  + @uncome_buy_amount,&#xA;uncome_sell_amount = uncome_sell_amount + @uncome_sell_amount,&#xA;frozen_amount      = frozen_amount      + @frozen_amount,&#xA;unfrozen_amount    = unfrozen_amount    + @unfrozen_amount,&#xA;correct_amount     = correct_amount     + @correct_amount,&#xA;sum_buy_amount     = sum_buy_amount     + @sum_buy_amount,&#xA;sum_buy_balance    = sum_buy_balance    + @sum_buy_balance,&#xA;sum_sell_amount    = sum_sell_amount    + @sum_sell_amount,&#xA;sum_sell_balance   = sum_sell_balance   + @sum_sell_balance,&#xA;cost_price         = (case when @cost_price = 0 then cost_price else @cost_price end)&#xA;where branch_no = @branch_no&#xA;and exchange_type = @exchange_type&#xA;and stock_account = @stock_account&#xA;and stock_code    = @stock_code&#xA;return current_amount, current_amount - frozen_amount + unfrozen_amount, correct_amount, current_amount&#xA;into @current_amount,  @enable_amount, @correct_amount, @post_amount;&#xA;exception&#xA;when others then&#xA;[事务内报错返回][ERR_ASSET_MOD_STOCK_FAIL][修改股份表失败][@branch_no,@exchange_type,@stock_code,@stock_account]&#xA;end;&#xA;&#xA;if (abs(@occur_amount) >= &lt;CNST_DOUBLE_ZERO>) then&#xA;-- 对于重做类业务，防止锁表之后还在重复的重做，这样会导致表解锁后业务重复发生（进而导致透支）&#xA;-- 因此此处检查是否已存在重做类业务的业务流水，如果存在，则返回特定报错（供前台重做类菜单判断）&#xA;if (@redo_flag = '1') then&#xA;begin&#xA;select count(*) into @rowcount from dual&#xA;where exists(select 1 from stockjour&#xA;where fund_account = @fund_account&#xA;and business_flag = @business_flag&#xA;and cancel_serialno = @cancel_serialno);&#xA;exception&#xA;when others then&#xA;[事务内报错返回][ERR_ASSET_QRY_STOCKJOUR_FAIL][查询证券余额变动失败][@redo_flag,@stock_account,@stock_code,@cancel_serialno]&#xA;end;&#xA;&#xA;if (@rowcount > 0) then&#xA;-- 20090722 wangxl 给前台的错误信息应该是已存在, 这样更容易理解 (后续如有修改该错误信息需注意, 前台有判断该错误号)&#xA;--[事务内报错返回][ERR_ASSET_STOCKJOUR_NOTEXISTS][证券余额变动记录不存在][@redo_flag,@stock_account,@stock_code,@cancel_serialno]&#xA;[事务内业务报错返回][ERR_ASSET_STOCKJOUR_EXISTS][证券余额变动记录已存在][@redo_flag,@stock_account,@stock_code,@cancel_serialno]&#xA;end if;&#xA;end if;&#xA;&#xA;@serial_counter_no := &lt;CNST_ASSETSERIALTYPE_STOCKJOUR>;&#xA;[AP_演示用户管理_演示子系统流水号获取]&#xA;@position_str := lpad(@init_date,8,'0') || lpad(@branch_no,5,'0') || lpad(@serial_no,10,'0');&#xA;&#xA;begin&#xA;[插入表记录][stockjour][real_status='0']&#xA;exception&#xA;when others then&#xA;[事务内报错返回][ERR_ASSET_ADD_STOCKJOUR_FAIL][增加证券余额变动失败][@position_str]&#xA;end;&#xA;end if;&#xA;&#xA;-- 20090720 zhanggq 紧急修改，增加@nocommit_flag为空的判断&#xA;-- 此处如果不判断为空，可能导致未提交事务存在（某些调用此AP的函数省略不传，@nocommit_flag为空，空等于任何值，导致未提交）&#xA;if (@nocommit_flag &lt;> '1') or (trim(@nocommit_flag) is null)  then&#xA;[事务处理结束]&#xA;end if;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="check_str" flags=""/>
+  <inputParameters id="client_id" flags=""/>
+  <inputParameters id="fund_account" flags=""/>
+  <inputParameters id="exchange_type" flags=""/>
+  <inputParameters id="stock_account" flags=""/>
+  <inputParameters id="stock_code" flags=""/>
+  <inputParameters id="stock_type" flags=""/>
+  <inputParameters id="money_type" flags=""/>
+  <inputParameters id="occur_amount" flags=""/>
+  <inputParameters id="uncome_buy_amount" flags=""/>
+  <inputParameters id="uncome_sell_amount" flags=""/>
+  <inputParameters id="frozen_amount" flags=""/>
+  <inputParameters id="unfrozen_amount" flags=""/>
+  <inputParameters id="sum_buy_amount" flags=""/>
+  <inputParameters id="sum_buy_balance" flags=""/>
+  <inputParameters id="sum_sell_amount" flags=""/>
+  <inputParameters id="sum_sell_balance" flags=""/>
+  <inputParameters id="stock_price" flags=""/>
+  <inputParameters id="join_serial_no" flags=""/>
+  <inputParameters id="init_date" flags=""/>
+  <inputParameters id="business_flag" flags=""/>
+  <inputParameters id="join_info" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <inputParameters id="redo_flag" flags=""/>
+  <inputParameters id="cancel_serialno" flags=""/>
+  <inputParameters id="nocommit_flag" flags=""/>
+  <outputParameters id="error_pathinfo" flags="IO"/>
+  <outputParameters id="error_info" flags="D"/>
+  <outputParameters id="error_no" flags="D"/>
+  <outputParameters id="error_id" flags="D"/>
+  <outputParameters id="error_sysinfo" flags="D"/>
+  <outputParameters id="current_amount" flags="IO"/>
+  <outputParameters id="correct_amount" flags="IO"/>
+  <outputParameters id="enable_amount" flags=""/>
+  <outputParameters id="post_amount" flags=""/>
+  <outputParameters id="serial_no" flags=""/>
+  <outputParameters id="sum_buy_amount_noacnt" flags=""/>
+  <outputParameters id="sum_buy_balance_noacnt" flags=""/>
+  <outputParameters id="sum_sell_amount_noacnt" flags=""/>
+  <outputParameters id="sum_sell_balance_noacnt" flags=""/>
+  <outputParameters id="cost_price_noacnt" flags=""/>
+  <internalVariables id="current_amount_old" name="当前数量" paramType="NON_STD_FIELD" type="HsQuantity" flags=""/>
+  <internalVariables id="cost_price_old" name="买入均价" paramType="NON_STD_FIELD" type="HsPrice" flags=""/>
+</procedure:Procedure>

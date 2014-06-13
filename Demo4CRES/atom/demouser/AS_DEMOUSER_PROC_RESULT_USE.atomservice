@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_PROC_RESULT_USE" chineseName="AS_演示用户管理_PROC结果集使用" description="[PROC结果集]使用" objectId="2100005" database="USERDB" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [PRO*C结果集语句]&#xA;**   功能：PRO*C调用通过游标获取方式返回查询结果集&#xA;**   范围：原子服务、原子函数&#xA;**   注意：报错的时候把关键变量返回，以方便问题查找，对于结果为空的判断不能使用[PRO*C结果集为空]&#xA;**        要采用[检查PRO*C结果集为空]进行判断&#xA;**&#xA;********************************************************************/&#xA;&#xA;&#xA;[PRO*C结果集语句][select *&#xA;from demoinfo&#xA;where (user_id = @user_id or trim(@user_id) is null)][demoinfo]&#xA;{&#xA;[PRO*C结果集返回]&#xA;}&#xA;else&#xA;{&#xA;[PRO*C结果集函数报错返回][ERR_USER_QRY_DEMOINFO_FAIL][查询演示信息失败][@user_id]&#xA;}&#xA;&#xA;//检查是否为空结果集&#xA;[检查PRO*C结果集为空]&#xA;{//123&#xA;[函数报错返回][ERR_USER_DEMOINFO_NOTEXISTS][演示信息记录不存在][@user_id]&#xA;}//123&#xA;&#xA;">
+  <inputParameters id="user_id" flags=""/>
+  <internalVariables id="rowcount" name="记录数" paramType="NON_STD_FIELD" type="HsNumID" flags=""/>
+</atom:AtomService>

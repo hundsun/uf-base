@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<useroption>
+	<!-- 生成模式  -->
+	<group id="genMode" text ="生成模式" default_value="general">
+		<item id="general" text="一般XML" type="RADIO" value="general"/>
+		<item id="float" text="浮点式XML" type="RADIO" value="float"/>
+	</group>
+	
+</useroption>

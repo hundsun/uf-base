@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logic:LogicService xmlns:logic="http://www.hundsun.com/ares/studio/cres/logic/1.0.0" inputCollection="true" interfaceFlag="" name="LS_DEMOUSER_DEMOINFOJOUR_GET" chineseName="LS_演示用户管理_演示信息流水获取" description="演示信息修改" objectId="100005" pseudoCode="&#xA;[AS_演示用户管理_演示信息流水获取]&#xA;&#xA;">
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="position_str" flags=""/>
+  <inputParameters id="request_num" flags=""/>
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="audit_action" flags="D"/>
+</logic:LogicService>

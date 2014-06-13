@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<useroption>
+	<!-- 业务类别选项配置  -->
+    <group id="bussinesstype" text="生成数据字典业务内容" default_value="0,1,2,3,4,5,6">
+       <item id="Pub" text="公用" type="CHECK" value="0"/>
+       <item id="Secu" text="证券" type="CHECK" value="1"/>
+       <item id="Opfund" text="开放式基金" type="CHECK" value="2"/>
+       <item id="Bond" text="债券" type="CHECK" value="3"/>
+       <item id="Crdt" text="融资融券" type="CHECK" value="4"/>
+       <item id="Futu" text="期货" type="CHECK" value="5"/>
+       <item id="Asset" text="存管" type="CHECK" value="6"/>
+    </group>
+    <!-- 版本  -->
+    <group id="version" text="版本" default_value="0">
+		<item id="" text="香港银行版" type="RADIO"  value="1"/>
+		<item id="" text="06香港版" type="RADIO"  value="0"/>
+	</group>
+	<!-- 安装包格式 -->
+	<group id="others" text ="其它" default_value="">
+		<item id="installType" text="安装包格式" type="CHECK"  value="installType"/>
+	</group>
+</useroption>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomFunction xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AF_DEMOPUB_ARG_MDB_SYNC" chineseName="AF_系统公用_参数表内存同步" description="获取内存表" objectId="3000004" database="USERDB" pseudoCode="/********************************************************************&#xA;**&#xA;** [参数表内存同步]&#xA;**   功能：表数据修改后通知原子层进行内存数据库同步&#xA;**   范围：使用已经在内存数据库缓存的表&#xA;**   注意：需要指明条件进行同步&#xA;**&#xA;********************************************************************/&#xA;&#xA;hs_strcpy(@table_name,&quot;sysdictionary&quot;);&#xA;sprintf(@where_str,&quot;branch_no = %d and dict_entry = %d and subentry = '%s'&quot;,@branch_no,@dict_entry,@subentry);&#xA;[AF_系统公用_内存表同步]&#xA;">
+  <inputParameters id="dict_entry" flags=""/>
+  <inputParameters id="branch_no" flags=""/>
+  <inputParameters id="subentry" flags=""/>
+</atom:AtomFunction>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hsdoc version="1.1.0">
+  <info cname="演示用户管理"/>
+  <extendMap>
+    <entity>
+      <key>ModuleExtensibleModel</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:ModuleExtensibleModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:model="http://www.hundsun.com/ares/studio/core/1.0.0">
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty"/>
+  </data2>
+</model:ModuleExtensibleModel>
+]]></value>
+    </entity>
+    <entity>
+      <key>CresModuleExtendProperty</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<cresextend:CresMoudleExtendProperty xmlns:cresextend="http://www.hundsun.com/ares/studio/cres/extend/1.0.0" subSysID="1" dataBaseName="USERDB">
+  <depends modulePath="demopub" name="demopub"/>
+</cresextend:CresMoudleExtendProperty>
+]]></value>
+    </entity>
+  </extendMap>
+</hsdoc>

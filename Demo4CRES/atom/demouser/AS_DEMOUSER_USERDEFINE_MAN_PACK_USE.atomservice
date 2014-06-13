@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_USERDEFINE_MAN_PACK_USE" chineseName="AS_演示用户管理_自定义手工打包使用" objectId="2100020" database="USERDB" pseudoCode="  /********************************************************************&#xA;   **&#xA;   ** [手工打包头]、[手工打包体]&#xA;   **   功能：自定义打包器进行手工打包&#xA;   **   范围：业务过程中打包器传输&#xA;   **   注意：1、主要结果传输中使用&#xA;   **&#xA;   ********************************************************************/&#xA;  //手工打包 － 单记录&#xA;  [手工打包头][branch_no,user_type][@clientinfox_clob]&#xA;  &#xA;  [手工打包体][@branch_no,@user_type][@clientinfox_clob]&#xA;  &#xA;  [结果集对象返回][@clientinfox_clob]&#xA;  &#xA;  //手工打包 － 多记录&#xA;  [手工打包头][branch_no,user_type][@business_data]&#xA;  &#xA;  [手工打包体][@branch_no,@user_type][@business_data][N]&#xA;  [手工打包体][@op_branch_no,@user_type_t][@business_data][N]&#xA;  &#xA;  [手工打包体结束][@business_data]&#xA;  &#xA;  [结果集对象返回][@business_data]">
+  <inputParameters id="user_id"/>
+  <outputParameters id="business_data" paramType="OBJECT" type="demouser.User"/>
+  <outputParameters id="clientinfox_clob" paramType="OBJECT" type="demouser.User"/>
+  <internalVariables id="user_type_t" name="用户类别" paramType="NON_STD_FIELD" type="HsType"/>
+</atom:AtomService>

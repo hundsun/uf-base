@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="stockreal" chineseName="股份交易信息表" objectId="200004">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_ASSET_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="200004" userSplit="true" isRedu="true"/>
+  </data2>
+  <columns fieldName="stock_account"/>
+  <columns fieldName="stock_code"/>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="exchange_type"/>
+  <columns fieldName="fund_account"/>
+  <columns fieldName="client_id"/>
+  <columns fieldName="money_type"/>
+  <columns fieldName="stock_type"/>
+  <columns fieldName="current_amount"/>
+  <columns fieldName="uncome_buy_amount"/>
+  <columns fieldName="uncome_sell_amount"/>
+  <columns fieldName="frozen_amount"/>
+  <columns fieldName="unfrozen_amount"/>
+  <columns fieldName="correct_amount"/>
+  <columns fieldName="enable_amount"/>
+  <columns fieldName="real_buy_amount"/>
+  <columns fieldName="real_buy_balance"/>
+  <columns fieldName="real_sell_amount"/>
+  <columns fieldName="real_sell_balance"/>
+  <columns fieldName="entrust_sell_amount"/>
+  <columns fieldName="sum_buy_amount"/>
+  <columns fieldName="sum_buy_balance"/>
+  <columns fieldName="sum_sell_amount"/>
+  <columns fieldName="sum_sell_balance"/>
+  <columns fieldName="cost_price"/>
+  <columns fieldName="check_str"/>
+  <columns fieldName="position_str"/>
+  <columns fieldName="client_group" mark="H"/>
+  <columns fieldName="room_code" mark="H"/>
+  <columns fieldName="asset_prop" mark="H"/>
+  <columns fieldName="limit_flag" mark="H"/>
+  <columns fieldName="risk_level" mark="H"/>
+  <columns fieldName="corp_client_group" mark="H"/>
+  <columns fieldName="corp_risk_level" mark="H"/>
+  <columns fieldName="asset_level" mark="H"/>
+  <columns fieldName="client_name" mark="H"/>
+  <columns fieldName="stock_name" mark="H"/>
+  <indexes name="idx_stockreal" unique="true" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="branch_no"/>
+    <columns columnName="exchange_type"/>
+    <columns columnName="stock_account"/>
+    <columns columnName="stock_code"/>
+  </indexes>
+  <indexes name="idx_stockreal_fund" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="fund_account"/>
+  </indexes>
+  <indexes name="idx_stockreal_id" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+  </indexes>
+  <indexes name="idx_stockreal_pos" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_stockreal_pos" unique="true" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_stockreal_id" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_stockreal_bran" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="branch_no"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_stockreal_acct" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="fund_account"/>
+    <columns columnName="position_str"/>
+  </indexes>
+</database:TableResourceData>

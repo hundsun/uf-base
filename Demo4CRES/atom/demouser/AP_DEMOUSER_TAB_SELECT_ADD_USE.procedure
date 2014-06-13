@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure:Procedure xmlns:procedure="http://www.hundsun.com/ares/studio/procedure/1.0.0" name="AP_DEMOUSER_TAB_SELECT_ADD_USE" chineseName="AP_演示用户管理_普通Select插入表记录使用" description="[插入表记录]宏定义使用" objectId="3100003" database="USERDB" interfaceFlag="" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [SELECT插入表记录]&#xA;**   功能：存储过程的表插入操作&#xA;**   范围：存储过程&#xA;**   注意：需要指明条件，如果对于字段需要变量指定，可以考虑在最后的中括号中指明&#xA;**&#xA;********************************************************************/&#xA;&#xA;@serial_counter_no := &lt;CNST_USERSUBSERAILTYPE_DEMOINFOJOUR>;&#xA;&#xA;[事务处理开始]&#xA;&#xA;begin&#xA;[插入表记录][demoinfo][user_status='0']&#xA;&lt;ERR_USER_ADD_DEMOINFO_FAIL>&#xA;exception&#xA;[事务内自定义异常返回][ERR_USER_ADD_DEMOINFO_FAIL][增加演示信息失败][@user_id]&#xA;end;&#xA;&#xA;[AP_演示用户管理_演示子系统流水号获取]&#xA;@position_str := lpad(@init_date,8,'0')||lpad(@serial_no,10,'0');&#xA;@op_remark := '增加演示信息: user_id = '''||@user_id||''' '||@remark;&#xA;begin&#xA;[SELECT插入表记录][demoinfojour][demoinfo][remark=@op_remark]&#xA;where user_id = @user_id;&#xA;exception&#xA;[事务内自定义异常返回][ERR_USER_ADD_DEMOINFOJOUR_FAIL][增加演示信息流水失败][@user_id]&#xA;end;&#xA;&#xA;[事务处理结束]&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="init_date" flags=""/>
+  <outputParameters id="error_pathinfo" flags="IO"/>
+  <outputParameters id="error_info" flags="D"/>
+  <outputParameters id="error_no" flags="D"/>
+  <outputParameters id="error_id" flags="D"/>
+  <outputParameters id="error_sysinfo" flags="D"/>
+  <outputParameters id="op_remark" flags="D"/>
+</procedure:Procedure>

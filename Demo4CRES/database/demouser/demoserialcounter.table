@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="demoserialcounter" chineseName="演示用户流水号计数器" description="1:  演示信息流水表(demoinfojour)" objectId="100003">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_USER_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" objectID="100003" userSplit="true"/>
+  </data2>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="serial_counter_no"/>
+  <columns fieldName="serial_counter_value"/>
+  <columns fieldName="serial_counter_span"/>
+  <columns fieldName="serial_counter_begin"/>
+  <columns fieldName="serial_counter_end"/>
+  <columns fieldName="append_number"/>
+  <columns fieldName="length_need"/>
+  <columns fieldName="init_serial_value"/>
+  <indexes name="idx_demoserialcounter" unique="true">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="serial_counter_no"/>
+    <columns columnName="branch_no"/>
+  </indexes>
+</database:TableResourceData>

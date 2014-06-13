@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure:Procedure xmlns:procedure="http://www.hundsun.com/ares/studio/procedure/1.0.0" name="AP_DEMOUSER_SERIALNO_GET" chineseName="AP_演示用户管理_演示子系统流水号获取" description="流水号获取，属于事务并发业务，要考虑事务的锁竞争" objectId="3110000" database="USERDB" interfaceFlag="" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [流水号获取]&#xA;**   功能：业务过程中的流水号获取&#xA;**   范围：存储过程&#xA;**   注意：属于事务并发业务，要考虑事务的锁竞争，对与需要进行营业部拆分的流水号获取指明营业部编号&#xA;**&#xA;********************************************************************/&#xA;&#xA;-- 获取流水号&#xA;[事务处理开始]&#xA;begin&#xA;update demoserialcounter&#xA;set serial_counter_value = serial_counter_value + 1&#xA;where branch_no = @branch_no&#xA;and serial_counter_no=@serial_counter_no&#xA;return serial_counter_value&#xA;into @serial_no;&#xA;exception&#xA;[事务内自定义异常返回][ERR_USER_MOD_DEMOSERIALCOUNTER_FAIL][修改系统流水号计数器失败][@serial_counter_no]&#xA;end;&#xA;&#xA;if sql%rowcount &lt;= 0 then&#xA;@serial_counter_value := 1;&#xA;@serial_no := 1;&#xA;@serial_counter_span := 1;&#xA;@init_serial_value := 1;&#xA;@length_need := 10;&#xA;--[插入表记录][demoserialcounter][branch_no=0,serial_counter_no=@serial_counter_no,serial_counter_value=@serial_counter_value,serial_counter_begin=@serial_counter_begin,serial_counter_end=@serial_counter_end,serial_counter_span=@serial_counter_span,append_number=@append_number,length_need=@length_need,config_type=@config_type,init_serial_value=@init_serial_value]&#xA;begin&#xA;[插入表记录][demoserialcounter][branch_no=0]&#xA;exception&#xA;when DUP_VAL_ON_INDEX then&#xA;begin&#xA;update demoserialcounter&#xA;set serial_counter_value = serial_counter_value + 1&#xA;where branch_no = 0&#xA;and serial_counter_no=@serial_counter_no&#xA;return serial_counter_value&#xA;into @serial_no;&#xA;exception&#xA;[事务内自定义异常返回][ERR_USER_MOD_DEMOSERIALCOUNTER_FAIL][修改系统流水号计数器失败][@serial_counter_no]&#xA;end;&#xA;[事务内自定义异常返回][ERR_USER_ADD_DEMOSERIALCOUNTER_FAIL][增加系统流水号计数器失败][@serial_counter_no]&#xA;end;&#xA;end if;&#xA;">
+  <inputParameters id="branch_no" flags=""/>
+  <inputParameters id="serial_counter_no" flags=""/>
+  <outputParameters id="error_pathinfo" flags="IO"/>
+  <outputParameters id="error_no" flags="D"/>
+  <outputParameters id="error_info" flags="D"/>
+  <outputParameters id="error_id" flags="D"/>
+  <outputParameters id="error_sysinfo" flags="D"/>
+  <outputParameters id="serial_no" flags=""/>
+  <internalVariables id="serial_counter_value" name="计数值" paramType="NON_STD_FIELD" type="HsNum" flags=""/>
+  <internalVariables id="serial_counter_span" name="计数跨度" paramType="NON_STD_FIELD" type="HsNum" flags=""/>
+  <internalVariables id="init_serial_value" name="初始化前值" paramType="NON_STD_FIELD" type="HsNum" flags=""/>
+  <internalVariables id="length_need" name="长度限制" paramType="NON_STD_FIELD" type="HsNum" flags=""/>
+</procedure:Procedure>

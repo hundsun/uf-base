@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomFunction xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AF_DEMOUSER__ORDER_TRANSFER" chineseName="AF_演示用户管理_推送使用" objectId="3100003" database="USERDB" pseudoCode="//@ 获取证券报盘状态，找到推送路由信息&#xA;&#xA;hs_strcpy(@table_name,&quot;transstatus&quot;);&#xA;hs_strcpy(@column_str,&quot;target_ar, trans_name, en_stock_type, en_branch_no&quot;);&#xA;sprintf(@where_str, &quot;exchange_type = '%s' and seat_no = '%s' and report_status = '1' order by en_stock_type desc, en_branch_no desc&quot;, @exchange_type, @seat_no);&#xA;[AF_系统公用_内存表获取]&#xA;[如果结果集不为空]&#xA;{&#xA;hs_strcpy(@target_ar, &quot; &quot;);&#xA;sprintf(@stock_type_s, &quot;,%s,&quot;, @stock_type);&#xA;sprintf(@branch_no_s, &quot;,%d,&quot;, @branch_no);&#xA;&#xA;while(!lpResultSet->IsEOF())&#xA;{&#xA;hs_strcpy(@en_stock_type_t, lpResultSet->GetStr(&quot;en_stock_type&quot;));&#xA;hs_strcpy(@en_branch_no_t, lpResultSet->GetStr(&quot;en_branch_no&quot;));&#xA;&#xA;sprintf(@en_stock_type, &quot;,%s,&quot;, @en_stock_type_t);&#xA;sprintf(@en_branch_no, &quot;,%s,&quot;, @en_branch_no_t);&#xA;&#xA;if ((isnull(trim(@en_stock_type_t)) == 0 || hs_strstr(@en_stock_type, @stock_type_s) > 0)&#xA;&amp;&amp; (isnull(trim(@en_branch_no_t)) == 0 || hs_strstr(@en_branch_no, @branch_no_s) > 0))&#xA;{&#xA;hs_strcpy(@target_ar, lpResultSet->GetStr(&quot;target_ar&quot;));&#xA;hs_strcpy(@trans_name, lpResultSet->GetStr(&quot;trans_name&quot;));&#xA;break;&#xA;}&#xA;&#xA;lpResultSet->Next();&#xA;}&#xA;&#xA;if (isnull(trim(@target_ar)) != 0)&#xA;{&#xA;iReturnCode = AsynPostMessage(lpContext,lpInUnPacker,@error_pathinfo,@error_info,@target_ar,@trans_name,270998, 0);&#xA;@error_no = iReturnCode;&#xA;}&#xA;else&#xA;{&#xA;[正常返回]&#xA;}&#xA;}&#xA;else&#xA;{&#xA;//不再到数据库中取, 直接返回&#xA;[正常返回]&#xA;}&#xA;&#xA;//iReturnCode = AsynPostMessage(lpContext,lpInUnPacker,@error_pathinfo,@error_info,@target_ar,@trans_name,CNST_FUNCTIONID_ENTRUST_PUSH, 0);&#xA;//iReturnCode = AsynPostMessage(lpContext,lpInUnPacker,@error_pathinfo,@error_info,@target_ar,@trans_name,270998, 0);&#xA;//@error_no = iReturnCode;&#xA;">
+  <inputParameters id="init_date" flags=""/>
+  <inputParameters id="branch_no" flags=""/>
+  <inputParameters id="exchange_type" flags=""/>
+  <inputParameters id="report_account" flags=""/>
+  <inputParameters id="stock_code" flags=""/>
+  <inputParameters id="stock_type" flags=""/>
+  <inputParameters id="entrust_no" flags=""/>
+  <inputParameters id="entrust_prop" flags=""/>
+  <inputParameters id="entrust_bs" flags=""/>
+  <inputParameters id="entrust_type" flags=""/>
+  <inputParameters id="entrust_amount" flags=""/>
+  <inputParameters id="entrust_price" flags=""/>
+  <inputParameters id="seat_no" flags=""/>
+  <inputParameters id="record_no" flags=""/>
+  <inputParameters id="report_bs" flags=""/>
+  <inputParameters id="report_no" flags=""/>
+  <inputParameters id="firm_id" flags=""/>
+  <internalVariables id="stock_type_s" name="证券类别" paramType="NON_STD_FIELD" type="HsChar6" flags=""/>
+  <internalVariables id="branch_no_s" name="" paramType="NON_STD_FIELD" type="HsChar8" flags=""/>
+  <internalVariables id="en_stock_type_t" name="允许证券类别" paramType="NON_STD_FIELD" type="HsChar2000" flags=""/>
+  <internalVariables id="en_branch_no_t" name="允许营业部" paramType="NON_STD_FIELD" type="HsChar2000" flags=""/>
+</atom:AtomFunction>

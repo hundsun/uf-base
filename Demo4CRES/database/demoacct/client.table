@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="client" chineseName="客户基本信息" objectId="200002">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_ASSET_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" objectID="200002"/>
+  </data2>
+  <columns fieldName="client_id"/>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="dev_branch_no"/>
+  <columns fieldName="client_card"/>
+  <columns fieldName="client_name"/>
+  <columns fieldName="full_name"/>
+  <columns fieldName="corp_client_group"/>
+  <columns fieldName="aml_risk_level"/>
+  <columns fieldName="corp_risk_level"/>
+  <columns fieldName="corp_begin_date"/>
+  <columns fieldName="corp_end_date"/>
+  <columns fieldName="asset_level"/>
+  <columns fieldName="client_gender"/>
+  <columns fieldName="nationality"/>
+  <columns fieldName="organ_flag"/>
+  <columns fieldName="id_kind"/>
+  <columns fieldName="id_no"/>
+  <columns fieldName="id_begindate"/>
+  <columns fieldName="id_enddate"/>
+  <columns fieldName="open_date"/>
+  <columns fieldName="cancel_date"/>
+  <columns fieldName="confirm_date"/>
+  <columns fieldName="client_status"/>
+  <columns fieldName="position_str"/>
+  <indexes name="idx_client" unique="true" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+  </indexes>
+  <indexes name="idx_client_name" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_name"/>
+  </indexes>
+  <indexes name="idx_client_id" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="id_no"/>
+  </indexes>
+  <indexes name="idx_client_pos" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_client" unique="true" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+  </indexes>
+  <indexes name="idx_client_name" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_name"/>
+  </indexes>
+  <indexes name="idx_client_id" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="id_no"/>
+  </indexes>
+  <indexes name="idx_client_pos" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+</database:TableResourceData>

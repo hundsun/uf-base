@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usermacro:UserMacro xmlns:usermacro="http://www.hundsun.com/ares/studio/usermacro/1.0.0" name="systemmacro.xml">
+  <macroItems name="插入表记录" sequence="[表名]" content="[插入表记录][表名]" type="原子,过程" description="根据后续括号内的表名，自动生成插入表记录的代码，用于后台过程实现；&#xD;&#xA;&lt;只是针对过程实现，并可在AS，AF的PRO*C语句块中使用>"/>
+  <macroItems name="SELECT插入表记录" sequence="[SELECT语句][表名]" content="[SELECT插入表记录][SELECT语句][表名]" type="原子,过程" description="根据后续括号内的表名，自动生成根据SELECT的结果插入表记录的代码，用于后台过程实现；&#xD;&#xA;&lt;只是针对过程实现，并可在AS，AF的PRO*C语句块中使用>"/>
+  <macroItems name="通用SELECT" sequence="[SELECT语句]" content="[通用SELECT][SELECT语句]" type="原子" description="本宏是直接执行后续括号内的SELECT语句，用于函数实现&#xD;&#xA;&lt;由于涉及的SQL语句不能绑定，每次请求都要重新解析>"/>
+  <macroItems name="PRO*C插入表记录" sequence="[表名]" content="[PRO*C插入表记录][表名]" type="原子" description="根据后续括号内的表名，自动生成插入表记录的代码。&#xD;&#xA;&lt;用于函数实现,插入的报错需要自己控制>"/>
+  <macroItems name="PRO*C结果集语句" sequence="[SQL语句]" content="[PRO*C结果集语句][SQL语句]" type="原子" description="标明后续括号中的代码为返回结果集的PRO*C中的SQL语句，&#xD;&#xA;&lt;用于函数实现>"/>
+  <macroItems name="PRO*C结果集返回" content="[PRO*C结果集返回]" type="原子" description="获取结果集，&#xD;&#xA;&lt;用于函数实现>"/>
+  <macroItems name="PRO*C记录获取开始" content="[PRO*C记录获取开始]" type="原子" description="用于与PRO*C结果集语句配套使用，以取得游标，将相应记录的值赋给指定的变量，&#xD;&#xA;&lt;用于函数实现>"/>
+  <macroItems name="PRO*C记录获取结束" content="[PRO*C记录获取结束]" type="原子" description="要写明获取的变量，和获取开始保持一致，&#xD;&#xA;&lt;用于函数实现>"/>
+  <macroItems name="PRO*C语句块开始" content="[PRO*C语句块开始]" type="原子" description="用户PRO*C批量SQL代码执行开始，&#xD;&#xA;&lt;用于函数实现>"/>
+  <macroItems name="PRO*C语句块结束" content="[PRO*C语句块结束]" type="原子" description="用户PRO*C批量SQL代码执行结束，&#xD;&#xA;&lt;用于函数实现>"/>
+  <macroItems name="手工打包头" content="[手工打包头]" type="原子" description="用户手工打包头使用"/>
+  <macroItems name="手工打包体" content="[手工打包体]" type="原子" description="用户手工打包值使用"/>
+  <macroItems name="PRO*C语句" type="原子"/>
+  <macroItems name="结果集对象返回" type="原子"/>
+</usermacro:UserMacro>

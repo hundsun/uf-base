@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="r_2100015" chineseName="AS_演示用户管理_调用函数获取变量" objectId="2100015" database="USERDB" pseudoCode="/********************************************************************&#xA;**&#xA;** [调用函数获取变量]&#xA;**   功能：调用函数获取变量&#xA;**   范围：原子服务、原子函数&#xA;**   注意：对于函数接口输入输出同名，而且需要输出该变量，则要对该变量在函数后特殊赋值处理&#xA;**&#xA;********************************************************************/&#xA;&#xA;[AF_系统公用_参数表内存获取][dict_prompt=@dict_prompt]&#xA;hs_strcpy(@subentry,lpResultSet->GetStr(&quot;subentry&quot;));&#xA;">
+  <inputParameters id="dict_entry" flags=""/>
+  <inputParameters id="branch_no" flags=""/>
+</atom:AtomService>

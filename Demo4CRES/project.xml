@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hsdoc version="1.1.0">
+  <id>studio4cres_demo</id>
+  <name>开发工具演示工程</name>
+  <version>1.0.0.1</version>
+  <contact></contact>
+  <note>开发工具演示工程</note>
+  <ext sequencedir="tools/Default/db_gensql_oracle.js" objectdir="tools/Default/db_gensql_ts_oracle.js" basicdatasciptdir="tools/Default/db_gensql_initdata_oracle.js" tabledir="tools/Default/db_gensql_oracle.js" real_type_to_display="C" procedurereghsobjdir="" viewdir="tools/Default/db_gensql_oracle.js" userdir="tools/Default/db_gensql_user_oracle.js" basicdatatype="jres.db.table"/>
+  <extendMap>
+    <entity>
+      <key>ExtensibleModelConfigProperty</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:ExtensibleModelConfigProperty xmlns:model="http://www.hundsun.com/ares/studio/core/1.0.0" xml="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;config>&#x9;&#x9;&#xD;&#xA;&#x9;&lt;!-- 元数据扩展示例 - 标准字段 -->&#xD;&#xA;&#x9;&lt;ExtensibleModel uri=&quot;http://www.hundsun.com/ares/studio/jres/metadata/1.0.0&quot; class=&quot;StandardField&quot; >&#xD;&#xA;&#x9;&lt;Attribute id=&quot;isused&quot; name=&quot;是否使用&quot; type=&quot;boolean&quot; />&#xD;&#xA;&#x9;&lt;Attribute id=&quot;used_detail&quot; name=&quot;使用说明&quot; type=&quot;bigstring&quot; />&#xD;&#xA;&#x9;&lt;/ExtensibleModel>&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- 元数据扩展示例 - 业务数据类型 -->&#xD;&#xA;&#x9;&lt;ExtensibleModel uri=&quot;http://www.hundsun.com/ares/studio/jres/metadata/1.0.0&quot; class=&quot;BusinessDataType&quot; >&#xD;&#xA;&#x9;&lt;Attribute id=&quot;isused&quot; name=&quot;是否使用&quot; type=&quot;boolean&quot; />&#xD;&#xA;&#x9;&lt;Attribute id=&quot;used_detail&quot; name=&quot;使用说明&quot; type=&quot;bigstring&quot; />&#xD;&#xA;&#x9;&lt;/ExtensibleModel>&#xD;&#xA;&#xD;&#xA;&lt;!-- 数据字典扩展示例 - 字典条目 -->&#xD;&#xA; &#x9;&lt;ExtensibleModel uri=&quot;http://www.hundsun.com/ares/studio/jres/metadata/1.0.0&quot; class=&quot;DictionaryType&quot; >&#xD;&#xA; &#x9;&lt;Attribute id=&quot;data_type&quot; name=&quot;数据类型&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;add_flag&quot; name=&quot;分支可增加标志&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;access_level&quot; name=&quot;存取级别&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;dict_type&quot; name=&quot;字典分类&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;appreciation&quot; name=&quot;增值&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;bussiness_type&quot; name=&quot;业务类别&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;modify_history&quot; name=&quot;修改历史&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_06&quot; name=&quot;06版&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_10&quot; name=&quot;认证1.0&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_account&quot; name=&quot;账户2.0&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_20&quot; name=&quot;2.0平台&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;/ExtensibleModel>&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- 数据字典扩展示例 - 字典子项 -->&#xD;&#xA; &#x9;&lt;ExtensibleModel uri=&quot;http://www.hundsun.com/ares/studio/jres/metadata/1.0.0&quot; class=&quot;DictionaryItem&quot; >&#xD;&#xA; &#x9;&lt;Attribute id=&quot;dict_type&quot; name=&quot;字典类型&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;access_level&quot; name=&quot;存取级别&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;appreciation&quot; name=&quot;增值&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;bussiness_type&quot; name=&quot;业务类别&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;modify_history&quot; name=&quot;修改历史&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_06&quot; name=&quot;06版&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_10&quot; name=&quot;认证1.0&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_account&quot; name=&quot;账户2.0&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_20&quot; name=&quot;2.0平台&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;/ExtensibleModel>&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- 菜单与功能扩展示例 - 菜单目录 -->&#xD;&#xA; &#x9;&lt;ExtensibleModel uri=&quot;http://www.hundsun.com/ares/studio/jres/metadata/1.0.0&quot; class=&quot;MenuItem&quot; >&#xD;&#xA; &#x9;&lt;Attribute id=&quot;menu_macro_name&quot; name=&quot;菜单宏定义&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;menu_location&quot; name=&quot;菜单位置&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;package_name&quot; name=&quot;服务包名称&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;menu_name&quot; name=&quot;菜单名称&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;leaf_flag&quot; name=&quot;叶节点标志&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;trade_flag&quot; name=&quot;允许交易标志&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;hot_key&quot; name=&quot;热键&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;shortcut_key&quot; name=&quot;快捷键&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;appreciation_menu&quot; name=&quot;增值菜单&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;bussiness_type&quot; name=&quot;业务类别&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_06&quot; name=&quot;06版&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_10&quot; name=&quot;认证1.0&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_account&quot; name=&quot;账户2.0&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_20&quot; name=&quot;2.0平台&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;system_version&quot; name=&quot;系统版本&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;/ExtensibleModel>&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- 菜单与功能扩展示例 - 功能目录 -->&#xD;&#xA; &#x9;&lt;ExtensibleModel uri=&quot;http://www.hundsun.com/ares/studio/jres/metadata/1.0.0&quot; class=&quot;Function&quot; >&#xD;&#xA; &#x9;&lt;Attribute id=&quot;module_name&quot; name=&quot;模块名称&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;function_macro_name&quot; name=&quot;功能宏定义&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;global_flag&quot; name=&quot;全局标志&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;access_level&quot; name=&quot;存取级别&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;password_type&quot; name=&quot;密码类型&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;monitor_flag&quot; name=&quot;监控标志&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;authority_flag&quot; name=&quot;授权标志&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;arch_get_flag&quot; name=&quot;档案获取标志&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;function_bussiness_type&quot; name=&quot;功能业务类别&quot; type=&quot;string&quot; />&#xD;&#xA;&#x9;&lt;Attribute id=&quot;system_status&quot; name=&quot;允许系统状态&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;bussiness_type&quot; name=&quot;业务类别&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_10&quot; name=&quot;认证1.0&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_account&quot; name=&quot;账户2.0&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;version_20&quot; name=&quot;2.0平台&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;Attribute id=&quot;bit_mark&quot; name=&quot;Bit位&quot; type=&quot;string&quot; />&#xD;&#xA; &#x9;&lt;/ExtensibleModel>&#xD;&#xA;&#xD;&#xA;&lt;/config>"/>
+]]></value>
+    </entity>
+    <entity>
+      <key>CresProjectExtendProperty</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<cresextend:CresProjectExtendProperty xmlns:cresextend="http://www.hundsun.com/ares/studio/cres/extend/1.0.0">
+  <procDefine parameter="ireclen" value="132"/>
+  <procDefine parameter="oreclen" value="132"/>
+  <procDefine isUsed="false" parameter="auto_connect" value="no" note="允许自动连接到 ops$ 帐户"/>
+  <procDefine parameter="char_map" value="string" note="正在映射字符数组和字符串"/>
+  <procDefine parameter="close_on_commit" value="yes" note="关闭所有 COMMIT 游标"/>
+  <procDefine isUsed="false" parameter="cmax" value="100" note="用于连接池的 CMAX 值 0 - 65535"/>
+  <procDefine isUsed="false" parameter="cmin" value="2" note="用于连接池的 CMIN 值 1 - 65535"/>
+  <procDefine isUsed="false" parameter="cincr" value="1" note="用于连接池的 CINCR 值 1 - 65535"/>
+  <procDefine isUsed="false" parameter="ctimeout" value="0" note="用于连接池的 CTIMEOUT 值 1 - 65535"/>
+  <procDefine isUsed="false" parameter="cnowait" value="0" note="用于连接池的 CNOWAIT 值 1 - 65535"/>
+  <procDefine parameter="code" value="cpp" note="所要生成的代码类型"/>
+  <procDefine isUsed="false" parameter="comp_charset" value="multi_byte" note="C 编译器支持的字符集类型"/>
+  <procDefine isUsed="false" parameter="config" value="default" note="使用另一配置文件覆盖系统配置文件"/>
+  <procDefine isUsed="false" parameter="cpool" value="no" note="支持连接共享"/>
+  <procDefine parameter="cpp_suffix" value="cpp" note="覆盖默认的 C++ 文件名后缀"/>
+  <procDefine isUsed="false" parameter="dbms" value="native" note="v6/v7/v8 兼容模式"/>
+  <procDefine parameter="def_sqlcode" value="yes" note="生成 '#define SQLCODE sqlca.sqlcode' 宏"/>
+  <procDefine parameter="define" value="USE_PRO_C" note="定义预处理程序符号"/>
+  <procDefine isUsed="false" parameter="duration" value="transaction" note="transaction"/>
+  <procDefine isUsed="false" parameter="dynamic" value="oracle" note="指定 Oracle 或 ANSI 动态 SQL 语义"/>
+  <procDefine isUsed="false" parameter="errors" value="yes" note="错误消息是否发送到终端"/>
+  <procDefine isUsed="false" parameter="events" value="no" note="支持发布-订阅事件通知"/>
+  <procDefine isUsed="false" parameter="fips" value="none" note="ANSI 不兼容用法的 FIPS 标志"/>
+  <procDefine parameter="hold_cursor" value="yes" note="控制游标高速缓存中的游标存留数"/>
+  <procDefine isUsed="false" parameter="lines" value="no" note="向生成的代码添加若干行指令"/>
+  <procDefine isUsed="false" parameter="ltype" value="short" note="在列表文件生成的数据量"/>
+  <procDefine isUsed="false" parameter="maxliteral" value="1024" note="生成的字符串字面量的最大长度 10 - 1024"/>
+  <procDefine parameter="maxopencursors" value="60" note="高速缓存的打开游标的最大数量"/>
+  <procDefine parameter="mode" value="ansi" note="代码对 Oracle 或 ANSI 规则的顺应性"/>
+  <procDefine isUsed="false" parameter="native_types" value="no" note="本机浮点/双精度支持"/>
+  <procDefine isUsed="false" parameter="nls_local" value="no" note="控制如何完成 NLS 字符语义"/>
+  <procDefine isUsed="false" parameter="objects" value="yes" note="支持对象类型"/>
+  <procDefine isUsed="false" parameter="oraca" value="no" note="控制 ORACA 的使用"/>
+  <procDefine isUsed="false" parameter="pagelen" value="80" note="列表文件的页长度 30 - 256"/>
+  <procDefine parameter="parse" value="partial" note="控制对哪一 非 SQL 代码进行语法分析"/>
+  <procDefine parameter="prefetch" value="200" note="在游标 OPEN 时预先提取的行数 0 - 65535"/>
+  <procDefine isUsed="false" parameter="release_cursor" value="no" note="控制从游标高速缓存释放的游标数"/>
+  <procDefine parameter="select_error" value="yes" note="控制选择错误的标志"/>
+  <procDefine parameter="sqlcheck" value="syntax" note="编译时 SQL 的检查量"/>
+  <procDefine parameter="threads" value="yes" note="表示多线程的应用程序"/>
+  <procDefine isUsed="false" parameter="type_code" value="oracle" note="使用 Oracle 或动态 SQL 的 ANSI 类型代码"/>
+  <procDefine isUsed="false" parameter="unsafe_null" value="no" note="允许不使用指示符表列的 NULL 提取"/>
+  <procDefine parameter="userid" value="hs_his/handsome@gfdb" note="用户名/口令 [@dbname] 连接字符串"/>
+  <procDefine isUsed="false" parameter="utf16_charset" value="nchar_charset" note="由 UTF16 变量使用的字符集表单"/>
+  <procDefine isUsed="false" parameter="varchar" value="no" note="允许使用隐式 varchar 结构"/>
+  <procDefine isUsed="false" parameter="version" value="recent" note="要返回哪一版本的对象"/>
+  <gccDefine parameter="PROC_INCLUDE" value="$(ORACLE_HOME)/precomp/public,$(ORACLE_HOME)/oci/include,$(FBASE_HOME),include=/usr/lib/gcc-lib/i386-redhat-linux/$(GCC_VER)/include" note="Proc预处理器包含的目录，用逗号隔开"/>
+  <gccDefine parameter="CC_INCLUDE" value="$(FBASE_HOME),$(ORACLE_HOME)/precomp/public,$(ORACLE_HOME)/oci/include" note="C/C++编译器的包含目录，逗号隔开"/>
+  <gccDefine parameter="LIBS" note="需要连接的第三方库文件,逗号隔开"/>
+  <gccDefine parameter="CFLAGS" value="-c -fPIC $(DEFS)adsfasdf"/>
+  <mvcDefine parameter="FBASE_HOME" value="../.." note="不设置的默认值为../.."/>
+  <mvcDefine parameter="OUTDIR" value="$(FBASE_HOME)\Bin" note="不设置的默认值为$(FBASE_HOME)\Bin"/>
+  <mvcDefine parameter="PROC_INCLUDE" value="$(ORACLE_HOME)/precomp/public,$(ORACLE_HOME)/oci/include,$(FBASE_HOME),$(VC_HOME)" note="Proc预处理器包含的目录，用逗号隔开"/>
+  <mvcDefine parameter="CC_INCLUDE" value="$(FBASE_HOME),$(ORACLE_HOME)/precomp/public,$(ORACLE_HOME)/oci/include" note="C/C++编译器的包含目录，逗号隔开"/>
+  <mvcDefine parameter="LIBS" note="需要连接的第三方库文件,逗号隔开"/>
+  <funcDefine value="src\s_libpublic.h" note="系统公共函数"/>
+</cresextend:CresProjectExtendProperty>
+]]></value>
+    </entity>
+    <entity>
+      <key>ProjectRevisionHistory</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:ProjectRevisionHistoryProperty xmlns:model="http://www.hundsun.com/ares/studio/core/1.0.0"/>
+]]></value>
+    </entity>
+    <entity>
+      <key>ProjectExtensibleModel</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:ProjectExtensibleModel xmlns:model="http://www.hundsun.com/ares/studio/core/1.0.0"/>
+]]></value>
+    </entity>
+  </extendMap>
+</hsdoc>

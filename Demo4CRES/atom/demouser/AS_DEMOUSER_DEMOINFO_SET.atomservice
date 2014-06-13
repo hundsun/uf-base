@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_DEMOINFO_SET" chineseName="AS_演示用户管理_演示信息设置" objectId="2110001" database="USERDB" pseudoCode="&#xA;[PRO*C语句][select count(*)&#xA;into @rowcount&#xA;from dual&#xA;where exists(select * from demoinfo&#xA;where user_id = @user_id)]&#xA;{&#xA;}&#xA;else&#xA;{&#xA;[PRO*C函数报错返回][ERR_USER_QRY_DEMOINFO_FAIL][查询演示信息失败][@user_id]&#xA;}&#xA;&#xA;if (@action_in == 1)&#xA;{&#xA;if (@rowcount > 0)&#xA;{&#xA;[函数报错返回][ERR_USER_DEMOINFO_EXISTS][演示信息已经存在]&#xA;}&#xA;&#xA;@user_status = CNST_ACCTSTATUS_NORMAL;&#xA;sprintf(@op_remark,&quot;演示信息增加：user_id = '%s'&quot;,@user_id);&#xA;&#xA;[PRO*C语句块开始]&#xA;[事务处理开始]&#xA;begin&#xA;[插入表记录][demoinfo]&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_USER_ADD_DEMOINFO_FAIL][增加演示信息失败][@user_id]&#xA;end;&#xA;&#xA;[AP_演示用户管理_演示子系统流水号获取][serial_no=@serial_no]&#xA;@init_date := to_char(sysdate,'YYYYMMDD');&#xA;@position_str := lpad(@init_date,8,'0') || lpad(@serial_no,10,'0');&#xA;&#xA;begin&#xA;[SELECT插入表记录][demoinfojour][demoinfo]&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_USER_ADD_DEMOINFOJOUR_FAIL][增加演示信息流水失败][@serial_no]&#xA;end;&#xA;[事务处理结束]&#xA;[PRO*C语句块结束]&#xA;}&#xA;else if (@action_in == 2)&#xA;{&#xA;if (@rowcount == 0)&#xA;{&#xA;[函数报错返回][ERR_USER_DEMOINFO_NOTEXISTS][演示信息不存在]&#xA;}&#xA;[PRO*C语句块开始]&#xA;[事务处理开始]&#xA;begin&#xA;update demoinfo&#xA;set id_no = @id_no,&#xA;id_kind = @id_kind,&#xA;address = @address,&#xA;phone_code = @phone_code&#xA;where user_id = @user_id;&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_USER_MOD_DEMOINFO_FAIL][修改演示信息败][@user_id]&#xA;end;&#xA;&#xA;[AP_演示用户管理_演示子系统流水号获取][serial_no=@serial_no]&#xA;@init_date := to_char(sysdate,'YYYYMMDD');&#xA;@position_str := lpad(@init_date,8,'0') || lpad(@serial_no,10,'0');&#xA;&#xA;begin&#xA;[SELECT插入表记录][demoinfojour][demoinfo]&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_USER_ADD_DEMOINFOJOUR_FAIL][增加演示信息流水失败][@serial_no]&#xA;end;&#xA;[事务处理结束]&#xA;[PRO*C语句块结束]&#xA;}&#xA;else if (@action_in == 3)&#xA;{&#xA;if (@rowcount == 0)&#xA;{&#xA;[函数报错返回][ERR_USER_DEMOINFO_NOTEXISTS][演示信息不存在]&#xA;}&#xA;[PRO*C语句块开始]&#xA;[事务处理开始]&#xA;begin&#xA;delete&#xA;from demoinfo&#xA;where user_id = @user_id;&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_USER_DEL_DEMOINFO_FAIL][修改演示信息败][@user_id]&#xA;end;&#xA;&#xA;[AP_演示用户管理_演示子系统流水号获取][serial_no=@serial_no]&#xA;@init_date := to_char(sysdate,'YYYYMMDD');&#xA;@position_str := lpad(@init_date,8,'0') || lpad(@serial_no,10,'0');&#xA;&#xA;begin&#xA;[插入表记录][demoinfojour]&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_USER_ADD_DEMOINFOJOUR_FAIL][增加演示信息流水失败][@serial_no]&#xA;end;&#xA;[事务处理结束]&#xA;[PRO*C语句块结束]&#xA;}&#xA;&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="audit_action" flags="D"/>
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="id_no" flags=""/>
+  <inputParameters id="id_kind" flags=""/>
+  <inputParameters id="user_gender" flags=""/>
+  <inputParameters id="address" flags=""/>
+  <inputParameters id="phone_code" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <inputParameters id="action_in" flags=""/>
+  <inputParameters id="cancel_serialno" flags=""/>
+  <outputParameters id="serial_no" flags="D"/>
+  <outputParameters id="op_remark" flags="D"/>
+  <outputParameters id="business_flag" flags=""/>
+  <internalVariables id="rowcount" name="记录数" paramType="NON_STD_FIELD" type="HsNumID" flags=""/>
+</atom:AtomService>

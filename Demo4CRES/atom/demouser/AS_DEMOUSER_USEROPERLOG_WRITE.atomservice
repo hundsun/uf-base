@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_USEROPERLOG_WRITE" chineseName="AS_演示用户管理_用户操作日志记录" description="写入用户操作时的日志情况(注意,OPERATOR_NO,FUNCTION_ID借用了固定生成的参数)，为用户进入系统所做的操作留痕。" objectId="2110000" database="USERDB" pseudoCode="&#xA;[AF_演示用户管理_用户操作日志记录][log_serial_no=@log_serial_no]&#xA;">
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="service_no" flags=""/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="operator_action" flags=""/>
+  <inputParameters id="client_id" flags=""/>
+  <inputParameters id="fund_account" flags=""/>
+  <inputParameters id="trade_account" flags=""/>
+  <inputParameters id="oper_code" flags=""/>
+  <inputParameters id="business_flag" flags=""/>
+  <inputParameters id="occur_amount" flags=""/>
+  <inputParameters id="occur_balance" flags=""/>
+  <inputParameters id="join_date" flags=""/>
+  <inputParameters id="join_serial_no" flags=""/>
+  <inputParameters id="op_remark" flags=""/>
+  <inputParameters id="curr_date" flags=""/>
+  <inputParameters id="curr_time" flags=""/>
+  <inputParameters id="init_date" flags=""/>
+  <inputParameters id="money_type" flags=""/>
+  <outputParameters id="log_serial_no" flags=""/>
+</atom:AtomService>

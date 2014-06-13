@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<useroption>
+	
+	<group id="bizpro" text ="业务属性配置"> 
+		<item id="biz_property" type="BIZ_PROPERTY" default_value="1,2,3,4"></item> 
+	</group>
+    
+    <!-- 版本  -->
+    <group id="version" text="版本" default_value="3">
+		<item id="" text="2.0平台" type="RADIO" value="3"/>
+		<item id="" text="账户2.0" type="RADIO"  value="2"/>
+		<item id="" text="认证1.0" type="RADIO"  value="1"/>
+		<item id="" text="06版" type="RADIO"  value="0"/>
+	</group>
+	<!-- 安装包格式 -->
+	<group id="others" text ="其它" default_value="installType,containSpecialDict">
+		<item id="installType" text="安装包格式" type="CHECK"  value="installType"/>
+		<item id="containSpecialMenu" text="包含增值数据字典" type="CHECK"  value="containSpecialDict"/>
+	</group>
+</useroption>

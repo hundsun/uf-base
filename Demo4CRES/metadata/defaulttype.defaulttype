@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata:StandardDataTypeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metadata="http://www.hundsun.com/ares/studio/jres/metadata/1.0.0" name="defaulttype">
+  <histories modifiedDate="2014-04-11 17:40" version="1.0.0.0" comment=""/>
+  <root/>
+  <items xsi:type="metadata:StandardDataType" name="STDint2_t" chineseName="整数">
+    <data key="oracle" value="number(2,0)"/>
+    <data key="db2" value="int"/>
+    <data key="sqlserver" value="int"/>
+    <data key="java" value="int"/>
+    <data key="c" value="int"/>
+    <data key="mysql" value="int"/>
+    <data key="informix" value="integer"/>
+    <data key="sybase" value="int"/>
+    <data key="C#" value="int"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDint3_t" chineseName="整数">
+    <data key="oracle" value="number(3,0)"/>
+    <data key="db2" value="int"/>
+    <data key="sqlserver" value="int"/>
+    <data key="java" value="int"/>
+    <data key="c" value="int"/>
+    <data key="mysql" value="int"/>
+    <data key="informix" value="integer"/>
+    <data key="sybase" value="int"/>
+    <data key="C#" value="int"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDint4_t" chineseName="整数">
+    <data key="oracle" value="number(4,0)"/>
+    <data key="db2" value="int"/>
+    <data key="sqlserver" value="int"/>
+    <data key="java" value="int"/>
+    <data key="c" value="int"/>
+    <data key="mysql" value="int"/>
+    <data key="informix" value="integer"/>
+    <data key="sybase" value="int"/>
+    <data key="C#" value="int"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDint8_t" chineseName="整数">
+    <data key="oracle" value="number(8,0)"/>
+    <data key="db2" value="int"/>
+    <data key="sqlserver" value="int"/>
+    <data key="java" value="int"/>
+    <data key="c" value="int"/>
+    <data key="mysql" value="int"/>
+    <data key="informix" value="integer"/>
+    <data key="sybase" value="int"/>
+    <data key="C#" value="int"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDint10_t" chineseName="整数">
+    <data key="oracle" value="number(10,0)"/>
+    <data key="db2" value="int"/>
+    <data key="sqlserver" value="int"/>
+    <data key="java" value="int"/>
+    <data key="c" value="int"/>
+    <data key="mysql" value="int"/>
+    <data key="informix" value="integer"/>
+    <data key="sybase" value="int"/>
+    <data key="C#" value="int"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDint16_t" chineseName="整数">
+    <data key="oracle" value="number(16,0)"/>
+    <data key="db2" value="int"/>
+    <data key="sqlserver" value="int"/>
+    <data key="java" value="int"/>
+    <data key="c" value="int"/>
+    <data key="mysql" value="int"/>
+    <data key="informix" value="integer"/>
+    <data key="sybase" value="int"/>
+    <data key="C#" value="int"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDint32_t" chineseName="整数">
+    <data key="oracle" value="number(16,0)"/>
+    <data key="db2" value="int"/>
+    <data key="sqlserver" value="int"/>
+    <data key="java" value="int"/>
+    <data key="c" value="int"/>
+    <data key="mysql" value="int"/>
+    <data key="informix" value="integer"/>
+    <data key="sybase" value="int"/>
+    <data key="C#" value="int"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDint64_t" chineseName="整数">
+    <data key="oracle" value="number(16,0)"/>
+    <data key="db2" value="int"/>
+    <data key="sqlserver" value="int"/>
+    <data key="java" value="int"/>
+    <data key="c" value="int"/>
+    <data key="mysql" value="int"/>
+    <data key="informix" value="integer"/>
+    <data key="sybase" value="int"/>
+    <data key="C#" value="int"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDdouble" chineseName="浮点">
+    <data key="oracle" value="number($L,$P)"/>
+    <data key="db2" value="double"/>
+    <data key="sqlserver" value="decimal($L,$P)"/>
+    <data key="java" value="double"/>
+    <data key="c" value="double"/>
+    <data key="mysql" value="double"/>
+    <data key="informix" value="decimal($L,$P)"/>
+    <data key="sybase" value="decimal($L,$P)"/>
+    <data key="C#" value="double"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDchar" chineseName="字符">
+    <data key="oracle" value="char($L)"/>
+    <data key="db2" value="char($L)"/>
+    <data key="sqlserver" value="char($L)"/>
+    <data key="java" value="char"/>
+    <data key="c" value="char"/>
+    <data key="mysql" value="char"/>
+    <data key="informix" value="char"/>
+    <data key="sybase" value="char($L)"/>
+    <data key="C#" value="char"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDstr" chineseName="字符串">
+    <data key="oracle" value="varchar2($L)"/>
+    <data key="db2" value="varchar($L)"/>
+    <data key="sqlserver" value="varchar($L)"/>
+    <data key="java" value="String"/>
+    <data key="c" value="char[$L]"/>
+    <data key="mysql" value="varchar"/>
+    <data key="informix" value="varchar($L)"/>
+    <data key="sybase" value="varchar($L)"/>
+    <data key="C#" value="String"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDdatetime" chineseName="日期时间">
+    <data key="oracle" value="date"/>
+    <data key="db2" value="timestamp"/>
+    <data key="sqlserver" value="datetime"/>
+    <data key="java" value="Date"/>
+    <data key="c" value="Date"/>
+    <data key="mysql" value="datetime"/>
+    <data key="informix" value="datetime"/>
+    <data key="sybase" value="datetime"/>
+    <data key="C#" value="Date"/>
+  </items>
+  <items xsi:type="metadata:StandardDataType" name="STDclob" chineseName="大字段">
+    <data key="oracle" value="clob"/>
+    <data key="db2" value="clob"/>
+    <data key="sqlserver" value="text"/>
+    <data key="java" value=""/>
+    <data key="c" value=""/>
+    <data key="mysql" value="text"/>
+    <data key="informix" value="text"/>
+    <data key="sybase" value="text"/>
+    <data key="C#" value=""/>
+  </items>
+</metadata:StandardDataTypeList>

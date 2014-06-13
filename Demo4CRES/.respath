@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<respath>
+  <entry kind="src" type="com.hundsun.ares.studio.jres.moduleroot.commondata" path="basicdata"/>
+  <entry kind="src" type="com.hundsun.ares.studio.jres.moduleroot.metadata" path="metadata"/>
+  <entry kind="src" type="com.hundsun.ares.studio.jres.moduleroot.database" path="database"/>
+  <entry kind="src" type="com.hundsun.ares.studio.jres.moduleroot.tools" path="tools"/>
+   <entry kind="src" type="com.hundsun.ares.studio.atom.resources.atomroot" path="atom"/>
+  <entry kind="src" type="com.hundsun.ares.studio.logic.resources.logicroot" path="logic"/>
+  <entry kind="src" type="com.hundsun.ares.studio.jres.obj.root" path="objects"/>
+</respath>

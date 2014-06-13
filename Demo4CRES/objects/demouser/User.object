@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biz:ARESObject xmlns:biz="http://www.hundsun.com/ares/studio/biz/1.0.0" name="User" chineseName="用户对象">
+  <properties id="op_branch_no" flags="D"/>
+  <properties id="operator_no" flags="D"/>
+  <properties id="user_type" flags="D"/>
+  <properties id="op_password" flags="D"/>
+  <properties id="op_station" flags="D"/>
+  <properties id="op_entrust_way" flags="D"/>
+  <properties id="menu_id" flags="D"/>
+  <properties id="function_id" flags="D"/>
+  <properties id="branch_no" flags="D"/>
+  <properties id="audit_action" flags="D"/>
+  <properties id="user_id" flags=""/>
+  <properties id="user_gender" flags=""/>
+  <properties id="id_no" flags=""/>
+  <properties id="id_kind" flags=""/>
+  <properties id="address" flags=""/>
+  <properties id="phone_code" flags=""/>
+  <properties id="remark" flags=""/>
+</biz:ARESObject>

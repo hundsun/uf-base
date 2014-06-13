@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hsdoc version="1.1.0">
+  <info name="yanshizhanghuguanli" cname="演示账户管理"/>
+  <extendMap>
+    <entity>
+      <key>ModuleExtensibleModel</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:ModuleExtensibleModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:model="http://www.hundsun.com/ares/studio/core/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" splitField="" splitNum="&lt;Modify>&#xA;  &lt;ModifyLog>&#xA;    &lt;log>&#xA;      &lt;position>&lt;/position>&#xA;      &lt;date>2010-04-14&lt;/date>&#xA;      &lt;version>V8.0.5.0&lt;/version>&#xA;      &lt;serialNumber>鍐呴儴&lt;/serialNumber>&#xA;      &lt;user>鍛ㄤ紵鏄�/user>&#xA;      &lt;principal>鍛ㄤ紵鏄�/principal>&#xA;      &lt;cause>&lt;/cause>&#xA;      &lt;content>鏂板妯″潡&lt;/content>&#xA;      &lt;tester>&lt;/tester>&#xA;    &lt;/log>&#xA;  &lt;/ModifyLog>&#xA;&lt;/Modify>" startData=""/>
+  </data2>
+</model:ModuleExtensibleModel>
+]]></value>
+    </entity>
+  </extendMap>
+</hsdoc>

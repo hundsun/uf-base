@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata:BusinessDataTypeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metadata="http://www.hundsun.com/ares/studio/jres/metadata/1.0.0" name="datatype">
+  <operations title="生成SQL" file="/Demo4CRES/tools/Default/datatype_gensql_oracle.js"/>
+  <operations title="使用分析" file="/Demo4CRES/tools/Default/datatype_setvalue_usedinfo.js"/>
+  <root/>
+  <items xsi:type="metadata:BusinessDataType" name="HsStatus" chineseName="状态" description="状态" stdType="STDchar" length="1" defaultValue="charDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsType" chineseName="类别" description="类别" stdType="STDchar" length="1" defaultValue="charDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFlag" chineseName="标志" description="标志" stdType="STDchar" length="1" defaultValue="charDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsClob" chineseName="字符对象类型" description="字符对象类型" stdType="STDclob" defaultValue="clobDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsDateTime" chineseName="日期时间" description="日期时间" stdType="STDdatetime" defaultValue="datetimeDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsNum2" chineseName="数字2" description="数字2" stdType="STDint8_t" length="2" precision="0" defaultValue="int8_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsNum3" chineseName="数字3" description="数字3" stdType="STDint16_t" length="3" precision="0" defaultValue="int16_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsNum4" chineseName="数字4" description="数字4" stdType="STDint16_t" length="4" precision="0" defaultValue="int16_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFundPrice" chineseName="价格（基金）" description="价格（基金）" stdType="STDdouble" length="9" precision="4" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsRate" chineseName="费率" description="费率" stdType="STDdouble" length="9" precision="8" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBranchNo" chineseName="分支编号" description="分支编号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsClientGroup" chineseName="客户类别" description="客户类别" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsRoomCode" chineseName="客户室号" description="客户室号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsRoomID" chineseName="客户室号" description="客户室号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsDate" chineseName="日期" description="日期" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsTime" chineseName="时间" description="时间" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsStationNo" chineseName="站点编号" description="站点编号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsStationID" chineseName="站点编号" description="站点编号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsSerialNo" chineseName="流水号" description="流水号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsSerialID" chineseName="流水号" description="流水号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFunctionNo" chineseName="功能号" description="功能号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFunctionID" chineseName="功能号" description="功能号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBusinessFlag" chineseName="业务标志" description="业务标志" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsNum" chineseName="整数" description="整数" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsNumID" chineseName="数字编号" description="数字编号" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsNum10" chineseName="数字10" description="数字10" stdType="STDint32_t" length="10" precision="0" defaultValue="int32_tDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBit" chineseName="Bit位" description="Bit位" stdType="STDdouble" length="12" precision="0" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFutuPrice" chineseName="价格（期货）" description="价格（期货）" stdType="STDdouble" length="12" precision="6" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsHighRate" chineseName="高精度费率" description="高精度费率" stdType="STDdouble" length="14" precision="13" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsHighPrice" chineseName="高精度价格" description="高精度价格" stdType="STDdouble" length="15" precision="8" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsRisk" chineseName="风险" description="风险" stdType="STDdouble" length="16" precision="4" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsUserNo" chineseName="用户编号" description="用户编号" stdType="STDdouble" length="18" precision="0" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsPosInt" chineseName="数字型定位串" description="数字型定位串" stdType="STDdouble" length="18" precision="0" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsPrice" chineseName="价格" description="价格" stdType="STDdouble" length="18" precision="3" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsQuantity" chineseName="数量" description="数量" stdType="STDdouble" length="19" precision="2" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFundQty" chineseName="基金份额" description="基金份额" stdType="STDdouble" length="19" precision="2" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsAmount" chineseName="金额" description="金额" stdType="STDdouble" length="19" precision="2" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsCurrency" chineseName="金额" description="金额" stdType="STDdouble" length="19" precision="2" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsHighAmount" chineseName="高精金额" description="高精金额" stdType="STDdouble" length="19" precision="2" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsAcctNo" chineseName="帐号" description="帐号" stdType="STDdouble" length="19" precision="1" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar2" chineseName="字符2" description="字符2" stdType="STDstr" length="2" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsMoneyType" chineseName="币种" description="币种" stdType="STDstr" length="3" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar3" chineseName="字符3" description="字符3" stdType="STDstr" length="3" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsStockType" chineseName="股票类别" description="股票类别" stdType="STDstr" length="4" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsExchangeType" chineseName="交易类别" description="交易类别" stdType="STDstr" length="4" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBankID" chineseName="银行号" description="银行号" stdType="STDstr" length="4" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar4" chineseName="字符4" description="字符4" stdType="STDstr" length="4" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsStockCode" chineseName="产品代码" description="产品代码" stdType="STDstr" length="6" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsZip" chineseName="邮编" description="邮编" stdType="STDstr" length="6" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar6" chineseName="字符6" description="字符6" stdType="STDstr" length="6" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsSeatID" chineseName="席位号" description="席位号" stdType="STDstr" length="8" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar8" chineseName="字符8" description="字符8" stdType="STDstr" length="8" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar10" chineseName="字符10" description="字符10" stdType="STDstr" length="10" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFuturesAccount" chineseName="期货账号" description="期货账号" stdType="STDstr" length="12" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBondCode" chineseName="债券代码" description="债券代码" stdType="STDstr" length="12" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsStockAccount" chineseName="交易账号" description="交易账号" stdType="STDstr" length="15" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsPassword" chineseName="密码" description="密码" stdType="STDstr" length="15" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar16" chineseName="字符16" description="字符16" stdType="STDstr" length="16" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsClientID" chineseName="客户编号" description="客户编号" stdType="STDstr" length="18" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFundAccount" chineseName="资产账号" description="资产账号" stdType="STDstr" length="18" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar18" chineseName="字符18" description="字符18" stdType="STDstr" length="18" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBankSerialID" chineseName="银行流水号" description="银行流水号" stdType="STDstr" length="20" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar20" chineseName="字符20" description="字符20" stdType="STDstr" length="20" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBankClientID" chineseName="客户账号（银行用）" description="客户账号（银行用）" stdType="STDstr" length="22" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar24" chineseName="字符24" description="字符24" stdType="STDstr" length="24" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFuturesCode" chineseName="期货代码" description="期货代码" stdType="STDstr" length="30" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsPhone" chineseName="电话号码" description="电话号码" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBankAccount" chineseName="银行账号" description="银行账号" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsPosStr" chineseName="字符型定位串" description="字符型定位串" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsStockName" chineseName="产品名称" description="产品名称" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsIDNo" chineseName="证件号码" description="证件号码" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsIDENTITY" chineseName="证件号码" description="证件号码" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsCardID" chineseName="资金卡号" description="资金卡号" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsFundstkAccount" chineseName="开放式基金交易账号" description="开放式基金交易账号" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar32" chineseName="字符32" description="字符32" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsToken" chineseName="用户口令" description="用户口令" stdType="STDstr" length="64" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsName" chineseName="姓名" description="姓名" stdType="STDstr" length="60" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsEnPassword" chineseName="增强型密码" description="增强型密码" stdType="STDstr" length="64" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsStation" chineseName="站点地址" description="站点地址" stdType="STDstr" length="255" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsName2" chineseName="名称" description="名称" stdType="STDstr" length="64" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar64" chineseName="字符64" description="字符64" stdType="STDstr" length="64" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar100" chineseName="字符100" description="字符100" stdType="STDstr" length="100" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsAddress" chineseName="地址" description="地址" stdType="STDstr" length="120" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar120" chineseName="字符120" description="字符120" stdType="STDstr" length="120" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar128" chineseName="字符128" description="字符128" stdType="STDstr" length="128" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar255" chineseName="字符255" description="字符255" stdType="STDstr" length="255" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar500" chineseName="字符500" description="字符500" stdType="STDstr" length="500" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsAbstract" chineseName="备注" description="备注" stdType="STDstr" length="2000" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar2000" chineseName="字符2000" description="字符2000" stdType="STDstr" length="2000" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar4000" chineseName="字符4000" description="字符4000" stdType="STDstr" length="4000" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar8000" chineseName="字符8000" description="字符8000" stdType="STDstr" length="8000" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsChar16000" chineseName="字符16000" description="字符16000" stdType="STDstr" length="16000" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsBondAccount" chineseName="债券账号" description="债券账号" stdType="STDstr" length="18" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsRecoupRate" chineseName="补偿比率" description="补偿比率" stdType="STDdouble" length="15" precision="8" defaultValue="doubleDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsOtcCode" chineseName="股权代码" description="股权代码" stdType="STDstr" length="6" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsOtcType" chineseName="股权类别" description="股权类别" stdType="STDstr" length="5" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsOtcAccount" chineseName="股权账号" description="股权账号" stdType="STDstr" length="15" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsOtcName" chineseName="股权名称" description="股权名称" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsProdAccount" chineseName="产品账号" description="产品账号" stdType="STDstr" length="18" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsProdCode" chineseName="产品代码" description="产品代码" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsMchAccount" chineseName="交易撮合账号" description="交易撮合账号" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsMchCode" chineseName="交易撮合代码" description="交易撮合代码" stdType="STDstr" length="32" defaultValue="strDefaultValue"/>
+  <items xsi:type="metadata:BusinessDataType" name="HsMchType" chineseName="交易撮合类别" description="交易撮合类别" stdType="STDstr" length="4" defaultValue="strDefaultValue"/>
+</metadata:BusinessDataTypeList>

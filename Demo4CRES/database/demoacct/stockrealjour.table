@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:XMI="http://www.omg.org/XMI" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="stockrealjour" chineseName="股份交易信息流水表" objectId="200005" XMI:version="2.0">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_ASSET_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="200005" isRedu="true"/>
+  </data2>
+  <columns fieldName="init_date"/>
+  <columns fieldName="serial_no"/>
+  <columns fieldName="curr_date"/>
+  <columns fieldName="curr_time"/>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="client_id"/>
+  <columns fieldName="fund_account"/>
+  <columns fieldName="exchange_type"/>
+  <columns fieldName="stock_account"/>
+  <columns fieldName="stock_code"/>
+  <columns fieldName="real_action"/>
+  <columns fieldName="business_flag"/>
+  <columns fieldName="occur_amount"/>
+  <columns fieldName="post_amount"/>
+  <columns fieldName="cancel_serialno"/>
+  <columns fieldName="remark"/>
+  <columns fieldName="position_str"/>
+  <columns fieldName="client_group" mark="H"/>
+  <columns fieldName="room_code" mark="H"/>
+  <columns fieldName="asset_prop" mark="H"/>
+  <columns fieldName="limit_flag" mark="H"/>
+  <columns fieldName="risk_level" mark="H"/>
+  <columns fieldName="corp_client_group" mark="H"/>
+  <columns fieldName="corp_risk_level" mark="H"/>
+  <columns fieldName="asset_level" mark="H"/>
+  <columns fieldName="client_name" mark="H"/>
+  <columns fieldName="money_type" mark="H"/>
+  <columns fieldName="stock_type" mark="H"/>
+  <columns fieldName="stock_name" mark="H"/>
+  <indexes name="idx_stockrealjour" unique="true" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="serial_no"/>
+    <columns columnName="branch_no"/>
+    <columns columnName="init_date"/>
+  </indexes>
+  <indexes name="idx_stockrealjour_fund" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="fund_account"/>
+  </indexes>
+  <indexes name="idx_stockrealjour_id" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+  </indexes>
+  <indexes name="idx_stockrealjour_pos" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_stockrealjour_pos" unique="true" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_stockrealjour_bran" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="branch_no"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_stockrealjour_idnp" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_stockrealjour_acctnp" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="fund_account"/>
+    <columns columnName="position_str"/>
+  </indexes>
+</database:TableResourceData>

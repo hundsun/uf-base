@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:XMI="http://www.omg.org/XMI" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="useroperlog" chineseName="用户操作日志表" objectId="100006" XMI:version="2.0">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_USER_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="100006" splitField="init_date" splitNum="24" startData="201001" isRedu="true"/>
+  </data2>
+  <columns fieldName="init_date"/>
+  <columns fieldName="serial_no"/>
+  <columns fieldName="curr_date"/>
+  <columns fieldName="curr_time"/>
+  <columns fieldName="op_branch_no"/>
+  <columns fieldName="operator_no"/>
+  <columns fieldName="op_station"/>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="business_flag"/>
+  <columns fieldName="function_id"/>
+  <columns fieldName="operator_action"/>
+  <columns fieldName="oper_code"/>
+  <columns fieldName="client_id"/>
+  <columns fieldName="fund_account"/>
+  <columns fieldName="trade_account"/>
+  <columns fieldName="occur_amount"/>
+  <columns fieldName="money_type"/>
+  <columns fieldName="occur_balance"/>
+  <columns fieldName="join_date"/>
+  <columns fieldName="join_serial_no"/>
+  <columns fieldName="op_remark"/>
+  <columns fieldName="position_str"/>
+  <indexes name="idx_useroperlog" unique="true" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_useroperlog_oper" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="operator_no"/>
+  </indexes>
+  <indexes name="idx_useroperlog_page" unique="true" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_useroperlog_bran" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="branch_no"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_useroperlog_id" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="operator_no"/>
+    <columns columnName="position_str"/>
+  </indexes>
+</database:TableResourceData>

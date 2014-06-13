@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomFunction xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AF_DEMOPUB_ARG_MDB_GET" chineseName="AF_系统公用_参数表内存获取" description="获取内存表" objectId="3000003" database="USERDB" pseudoCode="/********************************************************************&#xA;**&#xA;** [参数表内存获取]&#xA;**   功能：从内存数据库获取参数数据&#xA;**   范围：使用已经在内存数据库缓存的表&#xA;**   注意：对于参数表唯一索引字段比较多的情况，减少条件个数，采用循环判读处理，如果条件太多性能比较差&#xA;**&#xA;********************************************************************/&#xA;&#xA;// 取系统状态和初始化日期&#xA;// 获取系统基本参数&#xA;hs_strcpy(@table_name,&quot;sysdictionary&quot;);&#xA;hs_strcpy(@column_str,&quot;dict_prompt,subentry&quot;);&#xA;sprintf(@where_str, &quot;(dict_entry = %d) &quot;, @dict_entry);&#xA;if ( isnull(trim(@subentry)) != 0 )&#xA;sprintf(@where_str, &quot;%s and (subentry = '%s')&quot;, @where_str, @subentry);&#xA;[AF_系统公用_内存表获取]&#xA;[如果结果集不为空]&#xA;{&#xA;hs_strcpy(@dict_prompt,lpResultSet->GetStr(&quot;dict_prompt&quot;));&#xA;if ( isnull(trim(@subentry)) == 0 )&#xA;hs_strcpy(@subentry,lpResultSet->GetStr(&quot;subentry&quot;));&#xA;}&#xA;else&#xA;{&#xA;[函数报错返回][ERR_USER_SYSDICTIONARY_NOTEXISTS][数据字典记录不存在][@dict_entry]&#xA;}&#xA;&#xA;">
+  <inputParameters id="dict_entry" flags=""/>
+  <inputParameters id="branch_no" flags=""/>
+  <outputParameters id="dict_prompt" flags=""/>
+  <outputParameters id="subentry" flags="IO"/>
+</atom:AtomFunction>

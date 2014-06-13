@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomFunction xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" inputCollection="true" interfaceFlag="" name="AF_DEMOUSER_UPDATE_EXP_CTRL" chineseName="AF_演示用户管理_UPDATE异常控制" description="获取内存表" objectId="3100002" database="USERDB" pseudoCode="&#xA;[AP_演示用户管理_UPDATE异常控制]&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="id_no" flags=""/>
+  <inputParameters id="id_kind" flags=""/>
+  <inputParameters id="user_gender" flags=""/>
+  <inputParameters id="address" flags=""/>
+  <inputParameters id="phone_code" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <outputParameters id="op_remark" flags="D"/>
+</atom:AtomFunction>

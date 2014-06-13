@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:XMI="http://www.omg.org/XMI" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="demoinfojour" chineseName="演示信息流水表" objectId="100005" XMI:version="2.0">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_USER_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="100005" splitField="init_date" splitNum="24" startData="201001" isRedu="true" isClear="true"/>
+  </data2>
+  <columns fieldName="init_date"/>
+  <columns fieldName="serial_no"/>
+  <columns fieldName="curr_date"/>
+  <columns fieldName="curr_time"/>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="operator_no"/>
+  <columns fieldName="op_branch_no"/>
+  <columns fieldName="op_station"/>
+  <columns fieldName="op_entrust_way"/>
+  <columns fieldName="business_flag"/>
+  <columns fieldName="user_id"/>
+  <columns fieldName="user_type"/>
+  <columns fieldName="id_no"/>
+  <columns fieldName="id_kind"/>
+  <columns fieldName="user_gender"/>
+  <columns fieldName="address"/>
+  <columns fieldName="phone_code"/>
+  <columns fieldName="income"/>
+  <columns fieldName="user_status"/>
+  <columns fieldName="cancel_serialno"/>
+  <columns fieldName="remark"/>
+  <columns fieldName="position_str"/>
+  <columns fieldName="user_type_name" mark="H"/>
+  <indexes name="idx_demoinfojour" unique="true" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="serial_no"/>
+    <columns columnName="init_date"/>
+  </indexes>
+  <indexes name="idx_demoinfojour_id" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="user_id"/>
+  </indexes>
+  <indexes name="idx_demoinfojour_pos" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_demoinfojour_pos" unique="true" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_demoinfojour_id" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="user_id"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_demoinfojour_bran" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="branch_no"/>
+    <columns columnName="position_str"/>
+  </indexes>
+</database:TableResourceData>

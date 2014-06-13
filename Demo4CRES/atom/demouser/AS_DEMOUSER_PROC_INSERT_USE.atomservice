@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_PROC_INSERT_USE" chineseName="AS_演示用户管理_PROC插入使用" objectId="2100011" database="" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [PRO*C插入表记录]宏定义使用&#xA;**   功能：针对中间件表结构插入&#xA;**   范围：原子服务、原子函数&#xA;**   注意：如果能够采用PRO*C语句块，不要采用这种做法，因为会导致多次交互。&#xA;**&#xA;********************************************************************/&#xA;&#xA;&#xA;if (!@busi_data)&#xA;{&#xA;[函数报错返回][ERR_SYS_BUSI_GET_UNPACK_FAIL][ 系统忙（无法获取解包器）]&#xA;}&#xA;&#xA;while ( !@busi_data->IsEOF() )&#xA;{&#xA;hs_strcpy(@user_id,@busi_data->GetStr(&quot;user_id&quot;));&#xA;@user_type = @busi_data->GetChar(&quot;user_type&quot;);&#xA;@branch_no = @busi_data->GetInt(&quot;branch_no&quot;);&#xA;hs_strcpy(@id_no,@busi_data->GetStr(&quot;id_no&quot;));&#xA;@id_kind = @busi_data->GetChar(&quot;id_kind&quot;);&#xA;&#xA;[PRO*C插入表记录][demoinfo][user_status='0']&#xA;[PRO*C插入事务内报错返回][ERR_USER_ADD_DEMOINFO_FAIL][增加演示信息表失败]&#xA;&#xA;@busi_data->Next();&#xA;}&#xA;&#xA;[PRO*C事务提交]&#xA;&#xA;">
+  <inputParameters id="init_date"/>
+  <inputParameters id="busi_data" paramType="OBJECT" type="demouser.User"/>
+  <internalVariables id="finance_type" name="金融品种" paramType="NON_STD_FIELD" type="HsType"/>
+  <internalVariables id="exchange_type_b" paramType="NON_STD_FIELD" type="HsExchangeType"/>
+  <internalVariables id="init_date_b" paramType="NON_STD_FIELD" type="HsDate"/>
+  <internalVariables id="treat_flag" name="业务完成标志" paramType="NON_STD_FIELD" type="HsChar16"/>
+</atom:AtomService>

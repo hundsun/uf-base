@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:XMI="http://www.omg.org/XMI" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="demoinfo" chineseName="演示信息表" objectId="100004" XMI:version="2.0">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_USER_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="100004" splitField="init_date" splitNum="24" startData="201001"/>
+  </data2>
+  <columns fieldName="user_id"/>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="user_type"/>
+  <columns fieldName="id_no"/>
+  <columns fieldName="id_kind"/>
+  <columns fieldName="user_gender"/>
+  <columns fieldName="address"/>
+  <columns fieldName="phone_code"/>
+  <columns fieldName="income"/>
+  <columns fieldName="user_status" mark="C"/>
+  <columns fieldName="remark"/>
+  <columns fieldName="init_date" mark="H"/>
+  <indexes name="idx_demoinfo" unique="true">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="user_id"/>
+  </indexes>
+</database:TableResourceData>

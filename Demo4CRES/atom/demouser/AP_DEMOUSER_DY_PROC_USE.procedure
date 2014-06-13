@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<procedure:Procedure xmlns:procedure="http://www.hundsun.com/ares/studio/procedure/1.0.0" name="AP_DEMOUSER_DY_PROC_USE" chineseName="AP_演示用户管理_动态调用过程方式" description="动态过程调用" objectId="3100007" database="USERDB" interfaceFlag="" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [动态过程调用]&#xA;**   功能：针对过程自定义动态调用&#xA;**   范围：存储过程&#xA;**   注意：要求确定过程的输入输出参数&#xA;**&#xA;********************************************************************/&#xA;&#xA;begin&#xA;execute immediate  'declare v_error_no int; '&#xA;||'begin v_error_no := '||@compute_pro&#xA;||'(:op_branch_no,:operator_no,:user_type,:op_password,:op_station,:op_entrust_way,'&#xA;||':menu_id,:function_id,:branch_no,:init_date,:begin_date,'&#xA;||':end_date,:valid_date,:fund_account,:client_id,:client_group,:room_code,'&#xA;||':exchange_type,:stock_code,:stock_type,:entrust_bs,:entrust_way,'&#xA;||':money_type,:business_amount,:business_balance,'&#xA;||':remark,:str_config_str,'&#xA;||':error_info,:error_no,:fare_sort,'&#xA;||':op_remark,:serial_no,:fare,:fare1,:balance_ratio,'&#xA;||':contral_values,:balance_fare,:calcu_mode,:balance_type,:result_flag,:business_seg); end;'&#xA;using @op_branch_no,@operator_no,@user_type,@op_password,@op_station,@op_entrust_way,&#xA;@menu_id,@function_id,@branch_no,@init_date,@begin_date,&#xA;@end_date,@valid_date,@fund_account,@client_id,@client_group,@room_code,&#xA;@exchange_type,@stock_code,@stock_type,@entrust_bs,@entrust_way,&#xA;@money_type,@business_amount,@business_balance,@remark,@str_config_str,&#xA;out @error_info,out @error_no,in out @fare_sort,&#xA;out @op_remark,out @serial_no,out @fare,out @fare1,out @balance_ratio,&#xA;out @contral_values,out @balance_fare,out @calcu_mode,out @balance_type,out @result_flag, out @business_seg;&#xA;exception&#xA;when others then&#xA;[SQL报错返回][@error_no][@error_info]&#xA;end;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="address" flags=""/>
+  <inputParameters id="phone_code" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <outputParameters id="error_pathinfo" flags="IO"/>
+  <outputParameters id="error_info" flags="D"/>
+  <outputParameters id="error_no" flags="D"/>
+  <outputParameters id="error_id" flags="D"/>
+  <outputParameters id="error_sysinfo" flags="D"/>
+  <outputParameters id="op_remark" flags="D"/>
+</procedure:Procedure>

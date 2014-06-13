@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hsdoc version="1.1.0">
+  <info name="yanshiyonghuguanli" cname="演示用户管理"/>
+  <extendMap>
+    <entity>
+      <key>ModuleExtensibleModel</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:ModuleExtensibleModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:model="http://www.hundsun.com/ares/studio/core/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" splitField="init_date" splitNum="24" startData="201001"/>
+  </data2>
+</model:ModuleExtensibleModel>
+]]></value>
+    </entity>
+  </extendMap>
+</hsdoc>

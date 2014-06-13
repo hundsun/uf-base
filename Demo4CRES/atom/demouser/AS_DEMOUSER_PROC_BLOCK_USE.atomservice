@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_PROC_BLOCK_USE" chineseName="AS_演示用户管理_PROC语句块使用" objectId="2100009" database="USERDB" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [PRO*C语句块开始、[PRO*C语句块结束]&#xA;**   功能：PROC多SQL语句的批量操作，保证交互和业务的完整性，临时性的过程替代&#xA;**   范围：原子服务、原子函数，主要针对数据库的事务操作，保证&#xA;**   注意：如果语句块需要被多个地方使用，最好还是写成过程，增加代码重用&#xA;**&#xA;********************************************************************/&#xA;&#xA;[PRO*C语句块开始]&#xA;[事务处理开始]&#xA;begin&#xA;[插入表记录][demoinfo]&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_USER_ADD_DEMOINFO_FAIL][增加演示信息失败][@user_id]&#xA;end;&#xA;&#xA;[AP_演示用户管理_演示子系统流水号获取][serial_no=@serial_no]&#xA;@init_date := to_char(sysdate,'YYYYMMDD');&#xA;@position_str := lpad(@init_date,8,'0') || lpad(@serial_no,10,'0');&#xA;&#xA;begin&#xA;[SELECT插入表记录][demoinfojour][demoinfo]&#xA;where user_id = @user_id;&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_USER_ADD_DEMOINFOJOUR_FAIL][增加演示信息流水失败][@serial_no]&#xA;end;&#xA;[事务处理结束]&#xA;[PRO*C语句块结束]&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="audit_action" flags="D"/>
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="id_no" flags=""/>
+  <inputParameters id="id_kind" flags=""/>
+  <inputParameters id="user_gender" flags=""/>
+  <inputParameters id="address" flags=""/>
+  <inputParameters id="phone_code" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <inputParameters id="action_in" flags=""/>
+  <outputParameters id="serial_no" flags="D"/>
+  <outputParameters id="op_remark" flags="D"/>
+  <internalVariables id="rowcount" name="记录数" paramType="NON_STD_FIELD" type="HsNumID" flags=""/>
+</atom:AtomService>

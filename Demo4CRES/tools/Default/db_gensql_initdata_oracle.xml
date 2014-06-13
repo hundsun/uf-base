@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<useroption>
+	<!-- 子系统选项配置  -->
+	<group id="dbmodule" text ="模块">
+		<module id="" text="基础数据" module_root="basicdata" type="CHECK" default_value=""></module>
+	</group>
+	<!-- 安装与升级选项配置  -->
+	<group id="genmode" text ="生成方式" default_value="install">
+		<item id="" text="安装" type="RADIO" value="install"/>
+		<item id="" text="升级" type="RADIO" value="update"/>
+	</group>
+</useroption>

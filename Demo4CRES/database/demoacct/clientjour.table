@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="clientjour" chineseName="客户基本信息流水表" objectId="200003">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_ASSET_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="200003"/>
+  </data2>
+  <columns fieldName="init_date"/>
+  <columns fieldName="serial_no"/>
+  <columns fieldName="curr_date"/>
+  <columns fieldName="curr_time"/>
+  <columns fieldName="business_flag"/>
+  <columns fieldName="op_branch_no"/>
+  <columns fieldName="operator_no"/>
+  <columns fieldName="op_station"/>
+  <columns fieldName="op_entrust_way"/>
+  <columns fieldName="client_id"/>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="dev_branch_no"/>
+  <columns fieldName="client_card"/>
+  <columns fieldName="client_name"/>
+  <columns fieldName="full_name"/>
+  <columns fieldName="corp_client_group"/>
+  <columns fieldName="aml_risk_level"/>
+  <columns fieldName="corp_risk_level"/>
+  <columns fieldName="corp_begin_date"/>
+  <columns fieldName="corp_end_date"/>
+  <columns fieldName="asset_level"/>
+  <columns fieldName="client_gender"/>
+  <columns fieldName="nationality"/>
+  <columns fieldName="organ_flag"/>
+  <columns fieldName="id_kind"/>
+  <columns fieldName="id_no"/>
+  <columns fieldName="id_begindate"/>
+  <columns fieldName="id_enddate"/>
+  <columns fieldName="open_date"/>
+  <columns fieldName="cancel_date"/>
+  <columns fieldName="confirm_date"/>
+  <columns fieldName="client_status"/>
+  <columns fieldName="cancel_serialno"/>
+  <columns fieldName="remark"/>
+  <columns fieldName="position_str"/>
+  <indexes name="idx_clientjour" unique="true" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="serial_no"/>
+    <columns columnName="init_date"/>
+  </indexes>
+  <indexes name="idx_clientjour_id" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+  </indexes>
+  <indexes name="idx_clientjour_pos" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_clientjour_pos" unique="true" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_clientjour_id" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_clientjour_bran" mark="HL">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="branch_no"/>
+    <columns columnName="position_str"/>
+  </indexes>
+</database:TableResourceData>

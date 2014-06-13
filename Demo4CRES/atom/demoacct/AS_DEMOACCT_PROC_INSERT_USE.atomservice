@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOACCT_PROC_INSERT_USE" chineseName="AS_演示账户管理_客户增加" objectId="2210001" database="ASSETDB" pseudoCode="&#xA;[PRO*C语句块开始]&#xA;[事务处理开始]&#xA;begin&#xA;[插入表记录][client]&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_ASSET_ADD_CLIENT_FAIL][增加客户信息失败][@user_id]&#xA;end;&#xA;&#xA;[AP_演示账户管理_演示账户子系统流水号获取][serial_no=@serial_no]&#xA;@init_date := to_char(sysdate,'YYYYMMDD');&#xA;@position_str := lpad(@init_date,8,'0') || lpad(@serial_no,10,'0');&#xA;&#xA;begin&#xA;[SELECT插入表记录][clientjour][client]&#xA;exception&#xA;when others then&#xA;[PRO*C语句块事务内报错返回][ERR_ASSET_ADD_CLIENTJOUR_FAIL][增加客户信息流水失败][@serial_no]&#xA;end;&#xA;[事务处理结束]&#xA;[PRO*C语句块结束]&#xA;&#xA;">
+  <inputParameters id="init_date" flags=""/>
+  <inputParameters id="dev_branch_no" flags=""/>
+  <inputParameters id="client_card" flags=""/>
+  <inputParameters id="client_name" flags=""/>
+  <inputParameters id="full_name" flags=""/>
+  <inputParameters id="corp_client_group" flags=""/>
+  <inputParameters id="corp_risk_level" flags=""/>
+  <inputParameters id="asset_level" flags=""/>
+  <inputParameters id="client_gender" flags=""/>
+  <inputParameters id="nationality" flags=""/>
+  <inputParameters id="organ_flag" flags=""/>
+  <inputParameters id="id_kind" flags=""/>
+  <inputParameters id="id_no" flags=""/>
+  <inputParameters id="id_begindate" flags=""/>
+  <inputParameters id="id_enddate" flags=""/>
+  <inputParameters id="cancel_serialno" flags=""/>
+</atom:AtomService>

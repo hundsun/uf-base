@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomFunction xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" inputCollection="true" interfaceFlag="" name="AF_DEMOUSER_DEMOINFO_GET" chineseName="AF_演示用户管理_演示信息获取" description="获取内存表" objectId="3110001" database="USERDB" pseudoCode="&#xA;&#xA;[PRO*C结果集语句][select *&#xA;from demoinfo&#xA;where (user_id = @user_id)][demoinfo]&#xA;{&#xA;[PRO*C结果集返回]&#xA;}&#xA;else&#xA;{&#xA;[PRO*C结果集函数报错返回][ERR_USER_QRY_DEMOINFO_FAIL][查询演示信息失败][@user_id]&#xA;}&#xA;">
+  <inputParameters id="user_id" flags=""/>
+</atom:AtomFunction>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Demo4CRES</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.hundsun.ares.studio.core.aresbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.hundsun.ares.studio.core.aresnature</nature>
+		<nature>com.hundsun.ares.studio.core.extendnature</nature>
+		<nature>com.hundsun.ares.studio.core.refnature</nature>
+		<nature>com.hundsun.ares.studio.cresnature</nature>
+	</natures>
+</projectDescription>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata:TypeDefaultValueList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metadata="http://www.hundsun.com/ares/studio/jres/metadata/1.0.0" name="defaultvalue">
+  <histories modifiedDate="2014-04-11 17:40" version="1.0.0.0" comment=""/>
+  <root/>
+  <items xsi:type="metadata:TypeDefaultValue" name="int4_tDefaultValue" chineseName="整数">
+    <data key="oracle" value="0"/>
+    <data key="db2" value="0"/>
+    <data key="sqlserver" value="0"/>
+    <data key="java" value="0"/>
+    <data key="c" value="0"/>
+    <data key="mysql" value="0"/>
+    <data key="informix" value="0"/>
+    <data key="sybase" value="0"/>
+    <data key="C#" value="0"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="int8_tDefaultValue" chineseName="整数">
+    <data key="oracle" value="0"/>
+    <data key="db2" value="0"/>
+    <data key="sqlserver" value="0"/>
+    <data key="java" value="0"/>
+    <data key="c" value="0"/>
+    <data key="mysql" value="0"/>
+    <data key="informix" value="0"/>
+    <data key="sybase" value="0"/>
+    <data key="C#" value="0"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="int10_tDefaultValue" chineseName="整数">
+    <data key="oracle" value="0"/>
+    <data key="db2" value="0"/>
+    <data key="sqlserver" value="0"/>
+    <data key="java" value="0"/>
+    <data key="c" value="0"/>
+    <data key="mysql" value="0"/>
+    <data key="informix" value="0"/>
+    <data key="sybase" value="0"/>
+    <data key="C#" value="0"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="int16_tDefaultValue" chineseName="整数">
+    <data key="oracle" value="0"/>
+    <data key="db2" value="0"/>
+    <data key="sqlserver" value="0"/>
+    <data key="java" value="0"/>
+    <data key="c" value="0"/>
+    <data key="mysql" value="0"/>
+    <data key="informix" value="0"/>
+    <data key="sybase" value="0"/>
+    <data key="C#" value="0"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="int32_tDefaultValue" chineseName="整数">
+    <data key="oracle" value="0"/>
+    <data key="db2" value="0"/>
+    <data key="sqlserver" value="0"/>
+    <data key="java" value="0"/>
+    <data key="c" value="0"/>
+    <data key="mysql" value="0"/>
+    <data key="informix" value="0"/>
+    <data key="sybase" value="0"/>
+    <data key="C#" value="0"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="int64_tDefaultValue" chineseName="整数">
+    <data key="oracle" value="0"/>
+    <data key="db2" value="0"/>
+    <data key="sqlserver" value="0"/>
+    <data key="java" value="0"/>
+    <data key="c" value="0"/>
+    <data key="mysql" value="0"/>
+    <data key="informix" value="0"/>
+    <data key="sybase" value="0"/>
+    <data key="C#" value="0"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="doubleDefaultValue" chineseName="浮点">
+    <data key="oracle" value="0"/>
+    <data key="db2" value="0"/>
+    <data key="sqlserver" value="0"/>
+    <data key="java" value="0"/>
+    <data key="c" value="0.0"/>
+    <data key="mysql" value="0"/>
+    <data key="informix" value="0"/>
+    <data key="sybase" value="0"/>
+    <data key="C#" value="0"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="charDefaultValue" chineseName="字符">
+    <data key="oracle" value="' '"/>
+    <data key="db2" value="' '"/>
+    <data key="sqlserver" value="' '"/>
+    <data key="java" value="' '"/>
+    <data key="c" value="' '"/>
+    <data key="mysql" value="0"/>
+    <data key="informix" value="0"/>
+    <data key="sybase" value="0"/>
+    <data key="C#" value="' '"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="charDefaultValue0" chineseName="字符0">
+    <data key="oracle" value="'0'"/>
+    <data key="db2" value="'0'"/>
+    <data key="sqlserver" value="'0'"/>
+    <data key="java" value="'0'"/>
+    <data key="c" value="'0'"/>
+    <data key="mysql" value="'0'"/>
+    <data key="informix" value="'0'"/>
+    <data key="sybase" value="'0'"/>
+    <data key="C#" value="'0'"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="charDefaultValue1" chineseName="字符1">
+    <data key="oracle" value="'1'"/>
+    <data key="db2" value="'1'"/>
+    <data key="sqlserver" value="'1'"/>
+    <data key="java" value="'1'"/>
+    <data key="c" value="'1'"/>
+    <data key="mysql" value="'1'"/>
+    <data key="informix" value="'1'"/>
+    <data key="sybase" value="'1'"/>
+    <data key="C#" value="'1'"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="strDefaultValue" chineseName="字符串">
+    <data key="oracle" value="' '"/>
+    <data key="db2" value="' '"/>
+    <data key="sqlserver" value="' '"/>
+    <data key="java" value="&quot; &quot;"/>
+    <data key="c" value="{0}"/>
+    <data key="mysql" value="' '"/>
+    <data key="informix" value="' '"/>
+    <data key="sybase" value="' '"/>
+    <data key="C#" value="&quot; &quot;"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="datetimeDefaultValue" chineseName="日期时间">
+    <data key="oracle" value="sysdate"/>
+    <data key="db2" value="current timestamp"/>
+    <data key="sqlserver" value="getdate()"/>
+    <data key="java" value="0"/>
+    <data key="c" value="0"/>
+    <data key="mysql" value="now()"/>
+    <data key="informix" value="today()"/>
+    <data key="sybase" value="getdate()"/>
+    <data key="C#" value="0"/>
+  </items>
+  <items xsi:type="metadata:TypeDefaultValue" name="clobDefaultValue" chineseName="大字段">
+    <data key="oracle" value="empty_blob()"/>
+    <data key="db2" value=""/>
+    <data key="sqlserver" value=""/>
+    <data key="java" value=""/>
+    <data key="c" value=""/>
+    <data key="mysql" value=""/>
+    <data key="informix" value=""/>
+    <data key="sybase" value=""/>
+    <data key="C#" value=""/>
+  </items>
+</metadata:TypeDefaultValueList>

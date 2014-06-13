@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_PROC_SQL_USE" chineseName="AS_演示用户管理_PROC语句使用" objectId="2100006" database="USERDB" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [PRO*C语句]&#xA;**   功能：PROC记录获取&#xA;**   范围：原子服务、原子函数，业务过程中的表记录获取&#xA;**   注意：记录获取的时候要清楚是否存在多条记录，以确定是否需要进行多记录异常捕捉&#xA;**        统计函数是不用进行[PRO*C结果集为空]判断的，因为统计函数是肯定有结果集的&#xA;**&#xA;********************************************************************/&#xA;&#xA;// 1）一般的字段记录获取&#xA;[PRO*C语句][select id_no,&#xA;id_kind,&#xA;user_gender,&#xA;address,&#xA;phone_code&#xA;into @id_no,&#xA;@id_kind,&#xA;@user_gender,&#xA;@address,&#xA;@phone_code&#xA;from demoinfo&#xA;where (user_id = @user_id or trim(@user_id) is null)]&#xA;{&#xA;// Select无记录报错捕获&#xA;[PRO*C结果集为空]&#xA;{&#xA;[函数报错返回][ERR_USER_DEMOINFO_NOTEXISTS][演示信息记录不存在][@user_id]&#xA;}&#xA;}&#xA;else&#xA;{&#xA;// Select报错捕获（如果业务代码上是不可能存在多条记录的，可以不进行此判断）&#xA;[PRO*C函数多记录校验]&#xA;{&#xA;[PRO*C函数报错返回][ERR_USER_DEMOINFO_MULTI_REC][存在多条演示信息][@user_id]&#xA;}&#xA;else&#xA;{&#xA;[PRO*C函数报错返回][ERR_USER_QRY_DEMOINFO_FAIL][查询演示信息失败][@user_id]&#xA;}&#xA;}&#xA;&#xA;// 2）统计函数使用（sum、count、avg、max、min等）&#xA;//    统计函数是不用进行[PRO*C结果集为空]判断的，因为统计函数是肯定有结果集的&#xA;[PRO*C语句][select count(*)&#xA;into @rowcount&#xA;from dual&#xA;where exists(select *&#xA;from demoinfo&#xA;where (user_id = @user_id))]&#xA;{&#xA;}&#xA;else&#xA;{&#xA;[PRO*C函数报错返回][ERR_USER_QRY_DEMOINFO_FAIL][查询演示信息失败][@user_id]&#xA;}&#xA;&#xA;">
+  <inputParameters id="user_id" flags=""/>
+  <outputParameters id="id_no" flags=""/>
+  <outputParameters id="id_kind" flags=""/>
+  <outputParameters id="user_gender" flags=""/>
+  <outputParameters id="address" flags=""/>
+  <outputParameters id="phone_code" flags=""/>
+</atom:AtomService>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomFunction xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AF_DEMOPUB_MDB_GET" chineseName="AF_系统公用_内存表获取" description="获取内存表" objectId="3000001" database="USERDB" pseudoCode="&#xA;iReturnCode = GetMdbData(lpContext,lpInUnPacker,lpOutPacker,&amp;@error_no,@error_info,@error_pathinfo);&#xA;">
+  <inputParameters id="table_name" flags=""/>
+  <inputParameters id="column_str" flags=""/>
+  <inputParameters id="where_str" flags=""/>
+</atom:AtomFunction>

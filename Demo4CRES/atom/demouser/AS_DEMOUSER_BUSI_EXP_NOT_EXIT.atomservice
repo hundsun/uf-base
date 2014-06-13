@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_BUSI_EXP_NOT_EXIT" chineseName="AS_演示用户管理_业务异常不退出" description="业务异常不退出" objectId="2100017" database="USERDB" pseudoCode="/********************************************************************&#xA;**&#xA;** [中间件循环更新数据注意点]&#xA;**   功能：描述循环更新的错误写法和证券写法&#xA;**   范围：原子服务、原子函数&#xA;**   注意：1、对于游标更新数据的操作不要更新当前游标数据，否则会导致游标失效&#xA;**        2、为防止事务过程中出现异常，需要在函数前加&lt;K>，以保护如果出现异常能够进行事务回滚&#xA;**        3、如果业务处理过程不需要函数进行异常退出，则函数前加&lt;M>&#xA;**&#xA;********************************************************************/&#xA;[AF_演示用户管理_插入表记录使用]&#xA;&#xA;// M：如果函数异常不进行退出&#xA;&lt;M>[AF_系统公用_参数表内存获取]&#xA;&#xA;// K：如果函数异常进行事务回滚&#xA;&lt;K>[AF_演示用户管理_用户操作日志记录]&#xA;&#xA;[PRO*C事务提交]&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="audit_action" flags="D"/>
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="user_gender" flags=""/>
+  <inputParameters id="id_no" flags=""/>
+  <inputParameters id="id_kind" flags=""/>
+  <inputParameters id="address" flags=""/>
+  <inputParameters id="phone_code" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <outputParameters id="serial_no" flags=""/>
+  <outputParameters id="op_remark" flags=""/>
+</atom:AtomService>

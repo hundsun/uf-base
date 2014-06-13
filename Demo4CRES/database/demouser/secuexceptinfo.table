@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database:TableResourceData xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chouse="http://www.hundsun.com/ares/studio/jres/database/chouse/1.0.0" xmlns:database="http://www.hundsun.com/ares/studio/jres/database/1.0.0" xmlns:oracle="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0" name="secuexceptinfo" chineseName="证券业务异常信息表" objectId="100009">
+  <data2 key="Oracle">
+    <value xsi:type="oracle:OracleTableProperty" space="HS_USER_DATA"/>
+  </data2>
+  <data2 key="chouse">
+    <value xsi:type="chouse:TableBaseProperty" history="true" objectID="100009" userSplit="true" isRedu="true"/>
+  </data2>
+  <columns fieldName="init_date"/>
+  <columns fieldName="serial_no"/>
+  <columns fieldName="curr_date"/>
+  <columns fieldName="curr_time"/>
+  <columns fieldName="branch_no"/>
+  <columns fieldName="client_id"/>
+  <columns fieldName="fund_account"/>
+  <columns fieldName="exchange_type"/>
+  <columns fieldName="stock_account"/>
+  <columns fieldName="stock_code"/>
+  <columns fieldName="op_branch_no"/>
+  <columns fieldName="operator_no"/>
+  <columns fieldName="op_station"/>
+  <columns fieldName="function_id"/>
+  <columns fieldName="menu_id"/>
+  <columns fieldName="business_flag"/>
+  <columns fieldName="occur_amount"/>
+  <columns fieldName="stock_price"/>
+  <columns fieldName="join_info"/>
+  <columns fieldName="remark"/>
+  <columns fieldName="deal_status"/>
+  <columns fieldName="deal_info"/>
+  <columns fieldName="position_str"/>
+  <columns fieldName="cancel_serialno"/>
+  <columns fieldName="asset_prop" mark="H"/>
+  <columns fieldName="limit_flag" mark="H"/>
+  <columns fieldName="risk_level" mark="H"/>
+  <columns fieldName="corp_client_group" mark="H"/>
+  <columns fieldName="corp_risk_level" mark="H"/>
+  <columns fieldName="asset_level" mark="H"/>
+  <columns fieldName="client_name" mark="H"/>
+  <indexes name="idx_secuexceptinfo" unique="true" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="serial_no"/>
+    <columns columnName="init_date"/>
+  </indexes>
+  <indexes name="idx_secuexceptinfo_id" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+  </indexes>
+  <indexes name="idx_secuexceptinfo_pos" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_secuexceptinfo_acct" mark="C">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="fund_account"/>
+  </indexes>
+  <indexes name="idx_secuexceptinfo" unique="true" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_secuexceptinfo_id" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="client_id"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_secuexceptinfo_br" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="init_date"/>
+    <columns columnName="branch_no"/>
+    <columns columnName="position_str"/>
+  </indexes>
+  <indexes name="idx_secuexceptinfo_acct" mark="H">
+    <data2 key="Oracle">
+      <value xsi:type="oracle:OracleIndexProperty"/>
+    </data2>
+    <columns columnName="fund_account"/>
+    <columns columnName="position_str"/>
+  </indexes>
+</database:TableResourceData>

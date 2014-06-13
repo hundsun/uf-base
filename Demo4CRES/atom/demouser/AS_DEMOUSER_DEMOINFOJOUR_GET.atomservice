@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" inputCollection="true" interfaceFlag="" name="AS_DEMOUSER_DEMOINFOJOUR_GET" chineseName="AS_演示用户管理_演示信息流水获取" description="演示信息获取" objectId="2110003" database="USERDB" pseudoCode="&#xA;if (isnull(trim(@position_str)) == 0)&#xA;hs_strcpy(@position_str,&quot;0&quot;);&#xA;&#xA;if (@request_num &lt;= 0)&#xA;@request_num = 50;&#xA;&#xA;[PRO*C结果集语句][select *&#xA;from (select *&#xA;from demoinfojour&#xA;where (user_id = @user_id or trim(@user_id) is null)&#xA;and position_str > @position_str&#xA;order by position_str)&#xA;where rownum &lt;= @request_num][demoinfojour]&#xA;{&#xA;[PRO*C结果集返回]&#xA;}&#xA;else&#xA;{&#xA;[PRO*C结果集函数报错返回][ERR_USER_QRY_DEMOINFOJOUR_FAIL][查询演示信息失败][@user_id]&#xA;}&#xA;&#xA;">
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="position_str" flags=""/>
+  <inputParameters id="request_num" flags=""/>
+  <internalVariables id="rowcount" name="记录数" paramType="NON_STD_FIELD" type="HsNumID" flags=""/>
+</atom:AtomService>

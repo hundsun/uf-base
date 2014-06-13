@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_EXCEPTINFO_INSERT" chineseName="AS_演示用户管理_业务处理异常记录" description="记录分布式事务处理的异常情况，用于重做和冲正控制" objectId="2110006" database="ASSETDB" pseudoCode="&#xA;[AP_演示用户管理_业务处理异常记录]&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="client_id" flags=""/>
+  <inputParameters id="fund_account" flags=""/>
+  <inputParameters id="stock_account" flags=""/>
+  <inputParameters id="exchange_type" flags=""/>
+  <inputParameters id="stock_code" flags=""/>
+  <inputParameters id="client_group" flags=""/>
+  <inputParameters id="room_code" flags=""/>
+  <inputParameters id="init_date" flags=""/>
+  <inputParameters id="curr_date" flags=""/>
+  <inputParameters id="curr_time" flags=""/>
+  <inputParameters id="business_flag" flags=""/>
+  <inputParameters id="stock_type" flags=""/>
+  <inputParameters id="money_type" flags=""/>
+  <inputParameters id="redo_flag" flags=""/>
+  <inputParameters id="cancel_serialno" flags=""/>
+  <inputParameters id="stock_price" flags=""/>
+  <inputParameters id="occur_amount" flags=""/>
+  <inputParameters id="join_info" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <outputParameters id="serial_no" flags=""/>
+  <internalVariables id="cost_price_old" name="买入均价" paramType="NON_STD_FIELD" type="HsPrice" flags=""/>
+  <internalVariables id="sum_buy_amount_old" name="" paramType="NON_STD_FIELD" type="HsQuantity" flags=""/>
+  <internalVariables id="sum_buy_balance_old" name="" paramType="NON_STD_FIELD" type="HsAmount" flags=""/>
+  <internalVariables id="sum_sell_amount_old" name="" paramType="NON_STD_FIELD" type="HsQuantity" flags=""/>
+  <internalVariables id="sum_sell_balance_old" name="" paramType="NON_STD_FIELD" type="HsAmount" flags=""/>
+</atom:AtomService>

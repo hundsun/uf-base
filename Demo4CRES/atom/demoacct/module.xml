@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hsdoc version="1.1.0">
+  <info cname="演示账户管理"/>
+  <extendMap>
+    <entity>
+      <key>CresModuleExtendProperty</key>
+      <value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<cresextend:CresMoudleExtendProperty xmlns:cresextend="http://www.hundsun.com/ares/studio/cres/extend/1.0.0" subSysID="2" dataBaseName="ASSETDB"/>
+]]></value>
+    </entity>
+  </extendMap>
+</hsdoc>

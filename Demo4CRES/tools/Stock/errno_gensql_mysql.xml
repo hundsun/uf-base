@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<useroption>
+	<!-- 生成模式  -->
+	<group id="genMode" text ="生成模式" default_value="uninstall">
+		<item id="install" text="安装包" type="RADIO" value="install"/>
+		<item id="uninstall" text="非安装包" type="RADIO" value="uninstall"/>
+	</group>
+</useroption>

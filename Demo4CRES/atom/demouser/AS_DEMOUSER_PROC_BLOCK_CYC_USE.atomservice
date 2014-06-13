@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_PROC_BLOCK_CYC_USE" chineseName="AS_演示用户管理_PROC语句块循环业务使用" objectId="2100012" database="USERDB" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [PRO*C语句块]循环业务使用&#xA;**   功能：说明循环业务计数器变量的注意要点&#xA;**   范围：原子服务、原子函数，PROC语句块&#xA;**   注意：计数器变量i，不能和普通的proc变量一样处理，对于普通的proc变量，如果在proc过程处理是要带”:”的，但是计数器变量是不能这么处理，不然就会编译通不过的。&#xA;**&#xA;********************************************************************/&#xA;&#xA;[PRO*C语句块开始]&#xA;for i in 1..10 loop&#xA;@remark := @remark || i;&#xA;end loop;&#xA;[PRO*C语句块结束]&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="audit_action" flags="D"/>
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="id_no" flags=""/>
+  <inputParameters id="id_kind" flags=""/>
+  <inputParameters id="user_gender" flags=""/>
+  <inputParameters id="address" flags=""/>
+  <inputParameters id="phone_code" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <inputParameters id="action_in" flags=""/>
+  <outputParameters id="serial_no" flags="D"/>
+  <outputParameters id="op_remark" flags="D"/>
+  <internalVariables id="rowcount" name="记录数" paramType="NON_STD_FIELD" type="HsNumID" flags=""/>
+</atom:AtomService>

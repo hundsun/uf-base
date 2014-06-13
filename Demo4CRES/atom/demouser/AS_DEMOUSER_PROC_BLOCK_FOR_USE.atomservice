@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:AtomService xmlns:atom="http://www.hundsun.com/ares/studio/cres/atom/1.0.0" interfaceFlag="" name="AS_DEMOUSER_PROC_BLOCK_FOR_USE" chineseName="AS_演示用户管理_PROC语句块FOR游标使用" objectId="2100010" database="USERDB" pseudoCode="&#xA;/********************************************************************&#xA;**&#xA;** [PRO*C语句块]FOR游标使用&#xA;**   功能：通过使用For游标使用，减少不必要的游标申明，减少中间件和数据库交互次数&#xA;**   范围：原子服务、原子函数，PROC语句块、过程&#xA;**   注意：&#xA;**&#xA;********************************************************************/&#xA;&#xA;[PRO*C语句块开始]&#xA;for cur_demoinfo in (select * from demoinfo) loop&#xA;@user_id := cur_demoinfo.user_id;&#xA;end loop;&#xA;[PRO*C语句块结束]&#xA;&#xA;">
+  <inputParameters id="op_branch_no" flags="D"/>
+  <inputParameters id="operator_no" flags="D"/>
+  <inputParameters id="user_type" flags="D"/>
+  <inputParameters id="op_password" flags="D"/>
+  <inputParameters id="op_station" flags="D"/>
+  <inputParameters id="op_entrust_way" flags="D"/>
+  <inputParameters id="menu_id" flags="D"/>
+  <inputParameters id="function_id" flags="D"/>
+  <inputParameters id="branch_no" flags="D"/>
+  <inputParameters id="audit_action" flags="D"/>
+  <inputParameters id="user_id" flags=""/>
+  <inputParameters id="id_no" flags=""/>
+  <inputParameters id="id_kind" flags=""/>
+  <inputParameters id="user_gender" flags=""/>
+  <inputParameters id="address" flags=""/>
+  <inputParameters id="phone_code" flags=""/>
+  <inputParameters id="remark" flags=""/>
+  <inputParameters id="action_in" flags=""/>
+  <outputParameters id="serial_no" flags="D"/>
+  <outputParameters id="op_remark" flags="D"/>
+  <internalVariables id="rowcount" name="记录数" paramType="NON_STD_FIELD" type="HsNumID" flags=""/>
+</atom:AtomService>
